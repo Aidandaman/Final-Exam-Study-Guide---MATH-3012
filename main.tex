@@ -1,0 +1,1843 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\setlength{\parindent}{0pt}
+
+
+\title{Final Exam Study Guide - MATH 3012}
+\author{Assembled by: Aidan Wang}
+\date{November 2025}
+
+\begin{document}
+    \definecolor{lime}{RGB}{50, 205, 50}
+    \definecolor{navy}{HTML}{000080}
+    \definecolor{yellow}{HTML}{FFCE1B}
+    \pagestyle{fancy}
+    \fancyhf{}
+
+\maketitle
+
+    \begin{center}
+        \noindent\rule{1.0\textwidth}{0.75pt}
+    \end{center}    
+    
+    \begin{center}
+        \Large
+        \textbf{Table of Contents}
+
+        \vspace{0.25cm}
+
+        \normalsize 
+
+\label{home}
+
+\textbf{\textcolor{navy}{Module 1 Review}}, found here at \textcolor{navy}{\autoref{Module 1}} or at Page \pageref{Module 1}.
+
+\textbf{\textcolor{navy}{Module 2 Review}}, found here at \textcolor{navy}{\autoref{Module 2}} or at Page \pageref{Module 2}.
+
+\textbf{\textcolor{navy}{Module 3 Review}}, found here at \textcolor{navy}{\autoref{Module 3}} or at Page \pageref{Module 3}.
+
+\textbf{\textcolor{navy}{Module 4 Review}}, found here at \textcolor{navy}{\autoref{Module 4}} or at Page \pageref{Module 4}.
+
+\textbf{\textcolor{navy}{Module 5 Review}}, found here at \textcolor{navy}{\autoref{Module 5}} or at Page \pageref{Module 5}.
+
+\textbf{\textcolor{navy}{Module 6 Review}}, found here at \textcolor{navy}{\autoref{Module 6}} or at Page \pageref{Module 6}.
+
+\vspace{0.5cm}
+
+\textcolor{yellow}{Note}: \textcolor{navy}{Blue Font} is usually a link to another page or resource. Navigate to the \textcolor{navy}{Table of Contents} again at the footer of each page.
+    \end{center}
+
+
+    
+\fancyfoot[C]{Aidan W, \thepage\  —  \hyperref[home]{Back to \textcolor{navy}{\textbf{Table of Contents}}}}
+
+
+\newpage
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================Section 5=======================
+\section{Module 1 - Overview}
+\label{Module 1}
+    \begin{itemize}
+        \item With correct notation and terminology, find and describe sets, subsets, and set cardinalities, found at \textcolor{navy}{\autoref{Module 1.1}}.
+        \item With correct notation and terminology, define or interpret relations or functions between sets, found at \textcolor{navy}{\autoref{Module 1.2}}.
+        \item Interpret or find properties of relations and functions, such as reflexivity, symmetry, anti-symmetry, and transitivity (relations) and domain, codomain, range, injectivity, surjectivity, and bijectivity (functions). Be able to give some reasonable justification/proof that a relation or function has the above properties, found at \textcolor{navy}{\autoref{Module 1.3}}.
+        \item State and use the Pigeonhole Principle, found at \textcolor{navy}{\autoref{Module 1.4}}.
+        \item Understand and explain the relationship between set cardinality and the existence of injective/surjective/bijective functions. In particular, be able to describe the premise of a bijective proof and complete a simple example, found at \textcolor{navy}{\autoref{Module 1.5}}. 
+        \item Describe the logical premise of an inductive proof and complete a simple example, found at \textcolor{navy}{\autoref{Module 1.6}}.
+        \item State the sum and product rules for counting, and demonstrate practical and/or theoretical understanding of when and how each should be used, found at \textcolor{navy}{\autoref{Module 1.7}}.
+        \item Count the number of strings of a particular length satisfying a particular set of conditions (such as limitations on repetition of symbols), found at \textcolor{navy}{\autoref{Module 1.7}}.
+        \item Count the number of permutations of a particular length using at least that many symbols, found at \textcolor{navy}{\autoref{Module 1.7}}. 
+        \item Count the number of combinations of a particular size, found at \textcolor{navy}{\autoref{Module 1.7}}. 
+        \item Use combinations and strings/permutations together (along with the sum and/or product rules) to count slightly more complex groups of objects, found at \textcolor{navy}{\autoref{Module 1.7}}.
+    \end{itemize}
+
+\newpage
+
+\subsection{With correct notation and terminology, find and describe sets, subsets, and set cardinalities. \textcolor{navy}{\textbf{(MODULE 1.1)}}}
+\label{Module 1.1}
+
+\vspace{0.25cm}
+
+\textbf{\textcolor{red}{Definition}}: A \textbf{set} is a collection of elements, usually denoted by $S$ or another \underline{capital letter}. We have a couple ways to write these sets:
+    \begin{itemize}
+        \item $S = {1,2,3}$, or $T={1,2,3...9,10}$ is a listing of elements. This can be hard to do if we have many to list.
+        \item $N = {1,2,3,...}$ For listing an infinite set that give enough elements to show a clear pattern.
+        \item $A = \{a \space|\text{ a as in the English alphabet\}}$. This is called \textcolor{orange}{Set-Builder notation}. It gives \textbf{criteria} for elements that should belong in this set.
+    \end{itemize}
+
+    \vspace{0.3cm}
+
+\textcolor{orange}{\textbf{Notation}}: Let's refresh some other notations.
+    \begin{itemize}
+        \item $x$ is in an element $S$, we say $x \in S$. If not, then $x \notin S$.
+        \item We define \textcolor{orange}{Cardinality} as the number of elements in a set, written as $|S|$.
+        \item Also let's note $\emptyset$ is the empty set of nothing (\textcolor{lime}{True}-\textcolor{red}{False} Questions)!
+    \end{itemize}
+
+\vspace{0.25cm}
+
+\textcolor{red}{\textbf{Definition}}: A \underline{subset} of $S$ if every element of $T$ is also an element of $S$. Let's see some ways to write this
+    \begin{itemize}
+        \item T is a subset or equal to S: $T \subseteq S$.
+        \item T is a subset but \textbf{NOT equal} to S: $T \subset S$.
+        \item T is \textbf{NOT A SUBSET} of S: $T \nsubseteq S$.
+        \item We can also say $T = S$ by saying that $T \subseteq S$ and $S \subseteq T$ are both true.
+    \end{itemize}
+
+\vspace{0.4cm}
+
+\textcolor{navy}{\textbf{Final Remarks}}: For our final exam, notation is really important! Let's refresh ourselves on some key things to remember:
+    \begin{itemize}
+        \item 1 is a number, not a set.
+        \item $\{1\}$ is a set containing only 1.
+        \item (1,2,3) is a sequence containing numbers 1,2, and 3.
+        \item A number is not a set, so it cannot be a subset either.
+    \end{itemize}
+
+\newpage
+
+\subsection{With correct notation and terminology, define or interpret relations or functions between sets. \textcolor{navy}{\textbf{(MODULE 1.2)}}}
+\label{Module 1.2}
+
+\vspace{0.25cm}
+
+\textcolor{red}{\textbf{Definition}}: A \underline{relation} $R$ from a set $X$ to a set $Y$ (written $R : X \to Y$) is a set of ordered pairs
+    $$R = \{(x,y) \mid x \in X,\; y \in Y\}.$$
+    
+    \begin{center}
+        \textit{If $(x,y) \in R$, we say that $x$ is related to $y$, and write $xRy$.}
+    \end{center}
+
+\vspace{0.25cm}
+
+\textcolor{yellow}{\textbf{Note}}: A relation $R$ may have the following properties:
+\begin{itemize}
+    \item \textbf{Non-empty}: $R \neq \emptyset$.
+    \item \textbf{Reflexive}: $(x,x) \in R$ for all $x \in X$.
+    \item \textbf{Symmetric}: $(x,y) \in R \implies (y,x) \in R$.
+    \item \textbf{Anti-symmetric}: If $(x,y)$ and $(y,x)$ are in $R$, then $x = y$.
+    \item \textbf{Transitive}: $(x,y),(y,z) \in R \implies (x,z) \in R$.
+\end{itemize}
+
+\vspace{0.25cm}
+\textcolor{red}{\textbf{Definition}}: The \textbf{\underline{Cartesian product}} of sets $X$ and $Y$ is,
+$$X \times Y = \{(x,y) \mid x \in X,\, y \in Y\}.
+$$
+
+In other words, every relation of $R : X \to Y$ satisfies $R \subseteq X \times Y$.
+
+\vspace{0.25cm}
+\textcolor{red}{\textbf{Definition}}: The \textbf{\underline{power set}} of a set $S$ is the set of all of $S$'s subsets:
+
+$$\mathcal{P}(S) = \{T \mid T \subseteq S\}.$$
+
+\vspace{0.25cm}
+
+\textcolor{lime}{\textbf{Example}}: Let:
+$$X = \{1,2\}, \qquad Y = \{a,b\}.$$
+
+\vspace{0.25cm}
+
+Then the \textbf{Cartesian product} is:
+$$X \times Y = \{(1,a), (1,b), (2,a), (2,b)\}.$$
+
+\vspace{0.25cm}
+
+A possible relation $R \subseteq X \times Y$ is:
+$$R = \{(1,a), (2,b)\}.$$
+
+\newpage
+
+\subsection{Interpret or find properties of relations and functions, then prove a function has those properties. \textcolor{navy}{\textbf{(MODULE 1.3)}}}
+\label{Module 1.3}
+
+\vspace{0.25cm}
+
+\textcolor{yellow}{\textbf{RECALL}}: A relation $R$ may have the following properties:
+\begin{itemize}
+    \item \textbf{Non-empty}: $R \neq \emptyset$.
+    \item \textbf{Reflexive}: $(x,x) \in R$ for all $x \in X$.
+    \item \textbf{Symmetric}: $(x,y) \in R \implies (y,x) \in R$.
+    \item \textbf{Anti-symmetric}: If $(x,y)$ and $(y,x)$ are in $R$, then $x = y$.
+    \item \textbf{Transitive}: $(x,y),(y,z) \in R \implies (x,z) \in R$.
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textcolor{red}{\textbf{Definition}}: A \underline{\textbf{Function}} $f:X\to Y$ is a relation from $X$ to $Y$ such that each $x \in X$ belongs to exactly one ordered pair $(x,y)$.
+    \begin{itemize}
+        \item \textcolor{yellow}{\textbf{Note}}: our \underline{domain} is the set $X$, \underline{codomain} is $Y$, and \underline{range} of $f$ is the subset of $Y$ defined as $\{y\in Y| (x,y) \ \text{ in } f \text{ for some }x \in X\}$.
+    \end{itemize}
+
+\vspace{0.25cm}
+
+\textcolor{red}{\textbf{IMPORTANT}}: The definitions of relations are the most important definitions of this unit!
+    \begin{itemize}
+        \item A function $f$ is \textbf{injective} or \textbf{one-to-one} if no element of $f$'s range appears more than once.
+        \item A function $f$ is \textbf{surjective} or \textbf{onto} if the \underline{codomain} of $f$ is equal to its range.
+        \item A function $f$ is \textbf{bijective} or a \textbf{bijection} if it is both \underline{injective and surjective}.
+    \end{itemize}
+
+\vspace{0.25cm}
+
+\textcolor{orange}{\textbf{Proposition}}: It's important to note that these propositions require proofs, so they're less practical on the \underline{exam }exam. But, they're nice to know for \textcolor{lime}{True}-\textcolor{red}{False} Questions.
+    \begin{itemize}
+        \item There exists a surjective function $f:X\to Y$ if and only if $|X| \geq |Y|$.
+        \item There exists a n injective function $f:X\to Y$ if and only if $|X| \le |Y|$.
+    \end{itemize}
+
+\newpage
+
+\subsection{State and use the Pigeonhole Principle. \textcolor{navy}{\textbf{(MODULE 1.3)}}}
+\label{Module 1.4}
+
+\vspace{0.25cm}
+
+\textcolor{navy}{\textbf{Theorem}}: The \underline{\textbf{Pigeonhole Principle}} tells us that if we have \underline{$n+1$} \textcolor{orange}{pigeons} wish to nest in \underline{$n$} \textcolor{yellow}{pigeonholes}, at least one \textcolor{yellow}{pigeonholes} must contain 2 or more \textcolor{orange}{pigeons}.
+    \begin{itemize}
+        \item When translated to $X$ as "\textcolor{orange}{pigeons}" (\underline{domain}) and $Y$ as "\textcolor{yellow}{pigeonholes}" (\underline{codomain}), then if we have $|X|>|Y|$ then we have more \textcolor{orange}{pigeons} than \textcolor{yellow}{pigeonholes}. 
+        \item In other words, no relation $f:X\to Y$ is injective when $|X| > |Y|$.
+    \end{itemize}
+
+\vspace{0.25cm}
+
+\textcolor{navy}{\textbf{Theorem}}: Then we can also conclude that \underline{with sufficient proof}, we can say that a \textbf{bijection} $f:X\to Y$ exists if and only if $|X|=|Y|$.
+
+\vspace{0.3cm}
+
+\begin{center}
+        \includegraphics[width=1\linewidth]{pigeons.png}
+
+        \textcolor{yellow}{Note}: \textcolor{red}{Red is injective}, \textcolor{lime}{Green is bijective}, \textcolor{navy}{Blue is surjective}.
+\end{center}
+
+
+\newpage
+
+\subsection{Understand and explain the relationship between set cardinality and the existence of injective/surjective/bijective functions. In particular, be able to describe the premise of a bijective proof and complete a simple example. \textcolor{navy}{\textbf{(MODULE 1.4)}}}
+\label{Module 1.5}
+
+\vspace{0.25cm}
+
+\textcolor{yellow}{\textbf{RECALL}}: This unit is all about proving a \underline{bijection}! We have 2 approaches:
+    \begin{itemize}
+        \item We can prove a \underline{bijection} $f$ by definition,
+            \begin{itemize}
+                \item \textbf{Injective} if $f(w) =f(x)$ only when $w=x$.
+                \item \textbf{Surjective} if any $y\in Y$ there is some $x \in X$ so that $f(x)=y$.
+            \end{itemize}
+        \item We can then prove it's an \underline{\textbf{inverse function}} of some $g : Y \to X$, then $g$ and $f$ must be \underline{bijections}.
+            \begin{itemize}
+                \item \textcolor{yellow}{\textbf{Note}}: $g(f(x))=x$ for all $x \in X$ and $f(g(y)=y$ for all $y \in Y$.
+            \end{itemize}
+    \end{itemize}
+
+\vspace{0.25cm}
+
+If you're still confused on how to write a \underline{bijective} proof, please refer to the lecture video here: \href{https://gatech.instructure.com/courses/464392/pages/lesson-m1-dot-4-bijective-proofs?module_item_id=5401830}{\textcolor{blue}{Module 1.4 Lecture Notes}}.
+\begin{center}
+    $$P_3=\{()()(),(())(),()(()),((())),(()())\}$$
+    \includegraphics[width=1\linewidth]{;lattice.png}
+\end{center}
+
+\textcolor{orange}{\textbf{SUMMARY}}: Our goal is to show that set $P_n$ of valid parenthesis strings has the same cardinality as the set $L_n$. We'll also say $f$ is the function which takes any order of parenthesis in $P_n$ and translates them to a lattice step to (3,3).
+    \begin{itemize}
+        \item To show a function is \textbf{injective}, we can argue our two "\underline{different}" inputs give the same output, meaning that these inputs were the same all along!
+        \item To show a function is \textbf{surjective} we can argue that all elements or any arbitrary element of the codomain are part of range.
+    \end{itemize}
+
+\underline{\textbf{Injectivity}}: We have some arbitrary sequence of lefts and rights in $L_3$ called $l_1$. We then have some arbitrary sequence of parenthesis in $P_3$ called $p_1$. We know that they both have the same sequence of open/close parenthesis or right/up steps so $f$ must be injective.
+
+\underline{\textbf{Surjectivity}}: We then can show that the number of upward steps never exceeds or is below the number of rightward steps. We then also show that the number of right and left parenthesis are always equal to 3. So we have the co-domains always in the range. 
+
+\newpage
+
+\subsection{Describe the logical premise of an inductive proof and complete a simple example. \textcolor{navy}{\textbf{(MODULE 1.6)}}}
+\label{Module 1.6}
+
+\vspace{0.25cm}
+
+\textcolor{red}{\textbf{Definition}}: Suppose $S_n$ represents some always true or false statement of $n$. Then we can also define our \textbf{Base Case} as $S_{n_0}, S_{n_{0}+1},\space...$ as true through \underline{brute force} or some other method. Then we can also use an \textbf{Induction Step} to then imply the truth of $S_{k+1}$ for all positive integers of value $k$. In other words this $S_n$ is always true for $n\ge n_0$.
+
+\vspace{0.25cm}
+
+\textcolor{red}{\textbf{TRY IT}}: Show that for all $n \ge 1$:
+    $$\sum_{i=1}^{n}i= \frac{n(n+1)}{2}$$
+
+\begin{itemize}
+    \item So we need to prove a \textbf{base} \textbf{case}, usually it's always $n=1$.
+\end{itemize}
+    $$\sum_{i=1}^{1}i= \frac{1(1+1)}{2}=1$$
+
+\begin{itemize}
+    \item Then we need our \textbf{induction} \textbf{step}, which is to assume our claim holds true for any number $k$ and then $k+1$. We can write this as:
+\end{itemize}
+    $$\sum_{i=1}^{k}i= \frac{k(k+1)}{2}$$
+    
+\begin{itemize}
+    \item We can finally examine the left side of the equation and then do our final step, combined with some algebra and simplification:
+\end{itemize}
+    $$\sum_{i=1}^{k+1}i= \sum_{i=1}^{k}i +(k+1)$$
+    $$... = \frac{k(k+1)}{2} + (k+1) \text{, Assumption!}$$ 
+    $$... = \frac{(k+1)(k+2}{2}=\sum_{i=1}^{k+1}i$$
+    
+We have therefore proved by \textbf{induction} that this equality holds for $k+1$ whenever equality holds for $k$. So our \textcolor{navy}{\textbf{theorem}} is true for all $n$ positive integers.
+
+\vspace{0.5cm}
+
+If you're still struggling with \textbf{Induction}, use the link here: \href{https://gatech.instructure.com/courses/464392/pages/lesson-m1-dot-6-induction?module_item_id=5408376}{\textcolor{blue}{Module 1.6 Lecture Notes}}.
+
+    \begin{center}
+        \textcolor{yellow}{\textbf{Note}}: \textcolor{red}{Strong induction} will \textbf{not} be on the exam.
+    \end{center}
+
+\newpage
+
+\subsection{State the sum and product rules for counting, and demonstrate practical and/or theoretical understanding of when and how each should be used. Count the number of strings, permutations, and combinations of a particular size.
+ \textcolor{navy}{\textbf{(MODULE 1.7, 1.8, 1.9)}}}
+\label{Module 1.7}
+
+\vspace{0.25cm}
+
+\emph{Note that these units are really the foundation of 3012 and the next 3 units.}
+
+\textcolor{orange}{\textbf{Recall}}: \underline{Sum Rule} states that  \textbf{events which cannot occur simultaneously} of $n$ and $m$ can happen in $n+m$ ways.
+
+\textcolor{orange}{\textbf{Recall}}: \underline{Product Rule} states that tied events of $n$ and $m$ can happen in $n \cdot m$ ways.
+
+\vspace{0.25cm}
+
+\textcolor{orange}{\textbf{Important}}: Remember the difference between \textcolor{red}{\textbf{Permutation}}  and \textcolor{yellow}{\textbf{Combination}}. 
+    \begin{itemize}
+        \item \textcolor{red}{\textbf{Permutation}} is a possible arrangement (ordering) of objects. The way to write a permutation of size $k$ using $n$ distinct objects is denoted as $P(n,k)$ or $_nP_k$:
+            $$P(n,k)= \frac{n!}{(n-k)!}$$
+        \item \textcolor{yellow}{\textbf{Combination}} is a subset of $k$ objects selected from a set $X$. If $|X| = n$, the number of combinations is the \underline{choose function}, "n choose k":
+            $$C(n,k)= \binom{n}{k}$$
+    \end{itemize}
+
+\vspace{0.25cm}
+
+\textcolor{orange}{\textbf{Recall}}: The choose function has a lot of very interesting properties. It's defined as:
+
+\vspace{0.1cm}
+
+    $$\frac{n!}{(n-k)!k!}=\binom{n}{k}=\binom{n}{n-k}$$
+
+\vspace{0.25cm}
+
+Remember that \textbf{Combinations} can help us to count situations where we need to make \textbf{selections of items} from larger pools. A good rule of thumb: \underline{use} \underline{combinations when choosing}.
+
+
+
+
+
+
+
+\newpage
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================Section 5=======================
+\section{Module 2 - Overview}
+\label{Module 2}
+    \begin{itemize}
+        \item Calculate, with appropriate work, the number of ways to permute k of n distinct objects in a circular arrangement, found at \textcolor{navy}{\autoref{Module 2.1}}.
+        \item Calculate, with appropriate work, the number of ways to permute k of n indistinct objects, found at \textcolor{navy}{\autoref{Module 2.2}}.
+        \item Write, with sufficient detail and clearly stated quantity to count, a simple combinatorial proof, found at \textcolor{navy}{\autoref{Module 2.3}}.
+        \item Define, explain, and apply multinomial coefficients, found at \textcolor{navy}{\autoref{Module 2.4}}.
+        \item Calculate, with appropriate work, the number of ways to distribute n indistinct items to k distinct groups, found at \textcolor{navy}{\autoref{Module 2.5}}.
+        \item Calculate the number of integer solutions to a given equation, found at \textcolor{navy}{\autoref{Module 2.5}}.
+    \end{itemize}
+
+\newpage
+
+\subsection{Calculate, with appropriate work, the number of ways to permute k of n distinct objects in a circular arrangement. \textcolor{navy}{\textbf{(MODULE 2.1)}}}
+\label{Module 2.1}
+
+\vspace{0.25cm}
+
+\textbf{\textcolor{navy}{Theorem}}: \textbf{Circular Arrangements} are given by this formula with n objects:
+    $$P_{n,k}=(n-1)!$$
+
+\vspace{0.25cm}
+
+\underline{\textbf{Logically}}, we can think of these arrangements are either: using a fixed reference, so tying down an object and then arranging the rest or just using our formula.
+    \begin{itemize}
+        \item Also note we oftentimes must merge objects in conditions where objects must be seated adjacent to each other.
+    \end{itemize}
+
+    \begin{center}
+        \noindent\rule{1.0\textwidth}{0.75pt}
+    \end{center}    
+
+\subsection{Calculate, with appropriate work, the number of ways to permute k of n indistinct objects. \textcolor{navy}{\textbf{(MODULE 2.2)}}}
+\label{Module 2.2}
+
+\vspace{0.25cm}
+
+\textcolor{red}{\textbf{Definition}}: \textbf{Multiplicity} refers to how many times an element appears in a \underline{set}. In simpler terms, how many times does item $m$ appear? 
+    \begin{itemize}
+        \item \textit{Multiplicities} give this \textcolor{navy}{\textbf{theorem}}: for any collection of $n$ objects, the ways to permute if $n$ objects contain \textbf{repeat objects} is equal to:
+        $$\frac{n!}{n_1!\cdot n_2! \cdot \space... \cdot n_k!}$$
+        \item In other words:
+        $$\frac{n!}{\text{Multiplicities}}$$
+    \end{itemize}
+
+\textcolor{red}{\textbf{TRY IT}}: How many 7-letter permutations of the letters in "ATLANTA" are there?
+    \begin{itemize}
+        \item We have 3 copies of A, 2 copies of T, and multiplicities of 1 for L and N.
+            $$\frac{7!}{3! \cdot 2! \cdot 1! \cdot 1!}=\frac{7!}{6}$$
+    \end{itemize}
+
+\vspace{0.25cm}
+
+\textcolor{yellow}{\textbf{Note}}: Don't forget to properly apply cases when permuting for string lengths of $<n$! Here's an example in the lecture: \href{https://gatech.instructure.com/courses/464392/pages/lesson-m2-dot-2-permutations-with-indistinct-objects?module_item_id=5435166}{\textcolor{navy}{Last Example of Module 2.2}}.
+
+\newpage
+
+\subsection{Write, with sufficient detail and clearly stated quantity to count, a simple combinatorial proof, found at \textcolor{navy}{\textbf{(MODULE 2.3)}}}
+\label{Module 2.3}
+
+\vspace{0.25cm}
+
+\textcolor{red}{\textbf{Definition}}: A \textbf{combinatorial proof} (or "\underline{proof by counting}") counts the same set of objects in 2 \textbf{distinct but valid ways}. This \textbf{proves} that the numbers obtained in each count are equal.
+
+\vspace{0.25cm}
+
+\textbf{Goal: } Prove that $\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}$.
+    \begin{itemize}
+        \item \underline{Setup}: Let $X$ be the a set of size $n$ and count subsets of $X$ with size $k$ for some fixed $1\le k \le n$.
+
+        \vspace{0.25cm}
+        
+        \item $\binom{n}{k}$ counts the ways to choose k objects out of n objects total. This is also just a simple way to say k-subsets of $X$. \underline{Our left side is validated}.
+
+        \vspace{0.25cm}
+        
+        \item Let's fix a particular element $x \in X$. Now every subset of $X$ either contains $x$ or not. When we exclude $x$, or $x \notin$ our k elements, then we count $\binom{n-1}{k}$.
+        
+        \vspace{0.25cm}
+        
+        \item When we include $x$, or $x \in$ our k elements: $\binom{n-1}{k-1}$.
+
+        \vspace{0.25cm}
+        
+        \item \textbf{Wait}, we just counted all possible scenarios! Use the \underline{sum-rule} and we get $\binom{n-1}{k-1} + \binom{n-1}{k}$ as our total! Thus:
+        $$\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}$$
+    \end{itemize}
+
+\vspace{0.3cm}
+
+\textcolor{yellow}{\textbf{Note}}: For a better explanation, look to Dr. K's lecture: \href{https://gatech.instructure.com/courses/464392/pages/lesson-m2-dot-3-combinatorial-proofs?module_item_id=5435168}{\textcolor{navy}{Module 2.3}}.
+
+
+\newpage
+
+\subsection{Define, explain, and apply multinomial coefficients. \textcolor{navy}{\textbf{(MODULE 2.4)}}}
+\label{Module 2.4}
+
+\vspace{0.25cm}
+
+\textcolor{navy}{\textbf{Theorem}}: \textbf{Binomial Theorem} is the expansion of $(x+y)^n$:
+    $$(x+y)^n=\binom{n}{n}x^n+\binom{n}{n-1}x^{n-1}y+\space...+\binom{n}{1}xy^{n-1}+\binom{n}{n}y= \sum^n_{k=0}{\binom{n}{k}x^ky^{n-k}}$$
+
+\vspace{0.25cm}
+
+\textcolor{lime}{\textbf{Example}}: Find the coefficient of $x^5y^7$ in $(x+y)^{12}$:
+\begin{itemize}
+    \item $n=12$, $k=5$, and then our term is $\binom{12}{5}=\binom{12}{7}$.
+\end{itemize}
+
+\vspace{0.25cm}
+
+\emph{Now what happens if we have some }$(3x^2+4y)^6$, \emph{What do we do}?
+
+\vspace{0.3cm}
+
+\textcolor{navy}{\textbf{Theorem}}: \textbf{Multinomial Coefficients} follow the format of this:
+    $$\binom{n}{k}\cdot (\text{Coefficients } \cdot\text{ Powers})$$
+
+\begin{itemize}
+    \item This is also expressed as this: $\binom{n}{n_1,n_2,\space...,n_k}$.
+\end{itemize}
+
+\vspace{0.25cm}
+
+\textcolor{lime}{\textbf{Example}}: Find the coefficient of $x^6y^3$ in $(3x^2+4y)^{6}$:
+    \begin{itemize}
+        \item We can try substitution: letting $u=3x^2$ and $v=4y$. 
+        \item Then we have $u^3$ and $v^3$ to give us terms of $x^6$ and $y^3$.
+        \item We know from our \textbf{binomial theorem} that our term is:
+        $$\binom{6}{3}u^3v^3=\binom{6}{3}3^3\cdot x^6 \cdot(4y)^3 \to \binom{6}{3}\cdot 27 \cdot 64$$
+    \end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{\textcolor{yellow}{Note}}: if your term is too large, say we looked for $x^9y^9$ in this expansion, it wouldn't exist so our coefficient would be 0!
+
+
+\newpage
+
+\subsection{Calculate, with appropriate work, the number of ways to distribute n indistinct items to k distinct groups. Calculate the number of integer solutions to a given equation. \textcolor{navy}{\textbf{(MODULE 2.5)}}}
+\label{Module 2.5}
+
+\vspace{0.25cm}
+
+\textcolor{navy}{\textbf{Theorem}}: The \textbf{Stars and Bars} theorem tells us to distribute n identical objects into unique baskets of k is given by:
+    $$\binom{n+k-1}{n}=\binom{n+k-1}{k-1}$$
+
+\vspace{0.25cm}
+
+\textcolor{orange}{\textbf{Proposition}}: The following quantities are then equal:
+    \begin{itemize}
+        \item The number of selections with repetition of $n$ things from a set of size $k$.
+        \item The number of ways $n$ identical objects into unique baskets of k.
+        \item The number of non-negative integer solutions to the equation $x_1+x_2+ \space... + x_k=n$
+        \item And our formula for the \textbf{Stars and Bars}, $\binom{n+k-1}{n}$.
+    \end{itemize}
+
+\vspace{0.25cm}
+
+\textcolor{lime}{\textbf{Example}}: The number of non-negative integer solutions to the equation of $x_1+x_2+x_3=17$ is:
+    $$\binom{17+3-1}{17}=\binom{19}{17}=\binom{19}{2} \text{ solutions.}$$
+
+\vspace{0.3cm}
+
+That's it for \textcolor{navy}{Module 2}! The \textbf{Twelvefold Way} is more covered in \textcolor{navy}{\autoref{Module 3}} and \textcolor{navy}{\autoref{Module 4}}.
+
+
+\newpage
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================Section 5=======================
+\section{Module 3 - Overview}
+\label{Module 3}
+    \begin{itemize}
+        \item Explain the method and importance of the Inclusion/Exclusion principle, found at \textcolor{navy}{\autoref{Module 3.1}}.
+        \item Given a problem, identify an appropriate universal set and conditions to use in applying PIE, found at \textcolor{navy}{\autoref{Module 3.1}}.
+        \item Use PIE to calculate, with appropriate work, the number of items in a set satisfying none of a set of conditions, found at \textcolor{navy}{\autoref{Module 3.1.1}}.
+        \item State and apply the PIE formulas to find the number of objects satisfying at least a certain number of conditions, found at \textcolor{navy}{\autoref{Module 3.2}}.
+        \item State and apply the PIE formulas to find the number of objects satisfying exactly a certain number of conditions, found at \textcolor{navy}{\autoref{Module 3.2.1}}.
+        \item Use PIE to calculate the number of objects satisfying any given subset of a set of conditions, found at \textcolor{navy}{\autoref{Module 3.2.2}}.
+        \item Use derangements to solve counting problems [Recall that on an exam, the notation  will not suffice as a final answer- please simplify to factorials], found at \textcolor{navy}{\autoref{Module 3.3}}.
+        \item Define and describe rook numbers and rook polynomials using appropriate vocabulary and notation, found at \textcolor{navy}{\autoref{Module 3.4}}.
+        \item Find the rook polynomial of a reasonably sized chessboard, found at \textcolor{navy}{\autoref{Module 3.4}}.
+    \end{itemize}
+
+
+
+\newpage
+
+\subsection{Explain the method and importance of PIE. Given a problem, identify an appropriate universal set, conditions, and calculate the number of items in a set satisfying none of a set of conditions. \textcolor{navy}{\textbf{(MODULE 3.1)}}}
+\label{Module 3.1}
+
+\vspace{0.25cm}
+
+\textcolor{red}{\textbf{Definition}}: The \textbf{Principle of Inclusion-Exclusion} or \textbf{PIE} is the idea that we first count the \underline{universal set}, then correct for over-counted subsets until we get our desired subset of the \underline{universal set}.
+    \begin{itemize}
+        \item \textcolor{orange}{\textbf{Recall}}: the \underline{universal set} from \textit{Statistics} is the set of all objects of particular type, this definition holds still. It's the big set we're taking a subset from. In the image below $A$ is our universal set.
+        \item Usually we will let $A_i$ be the number of elements that fulfill some $i$ condition. $A$ can then be our \underline{universal set}. Here's a drawing below of this scenario from Dr. K's \href{https://gatech.instructure.com/courses/464392/pages/lesson-m3-dot-1-pie-part-i-counting-surjections?module_item_id=5451080}{\textcolor{navy}{Module 3.1 Lecture}}:
+    \end{itemize}
+
+\begin{center}
+        \includegraphics[width=0.45\linewidth]{Venn3.png}
+\end{center}
+
+\vspace{0.25cm}
+
+Now an interesting question to think about: \emph{how can we count the number of surjections from some $X \to Y$} where $X=\{1,2,...,n\}$ and $Y = \{1,2,...,k\}$?
+    \begin{itemize}
+        \item \textbf{PIE} tells us that we should first start with all functions and then correct our answer until we get just surjections. In other words, we need to weed out the functions that don't include some $i$ in their codomain $Y$!
+        \item We know there are a total of $k^n$ functions from $X\to Y$.
+        \item Let $A_i = \{\text{functions that don't contain element } i\}$.
+        \item Then: $|\text{surjections}|= k^n - |A_1 \cup A_2 \cup A_3 ... \cup A_k|$.
+    \end{itemize}
+
+\vspace{0.25cm}
+
+Writing all of that out is \underline{tedious and hard to follow}. Let's create instead a \textbf{condition} of $c_i$ where element is not included. Then let $N(\overline{c_i})$ be the number of sets where elements in $A$ \textcolor{red}{doesn't} satisfy $c_i$: $N(\overline{c_1}) =|A|-|A_i|$.
+
+\vspace{0.25cm}
+
+\textcolor{navy}{\textbf{Theorem}}: We can then rewrite the essence of \textbf{PIE} as (\textit{3 bad conditions}):
+    $$N(\overline{c_1c_2c_3})=|A|-N(\overline{c_1})-N(\overline{c_2})-N(\overline{c_3})+N(\overline{c_1c_2})+N(\overline{c_1c_3})+N(\overline{c_2c_3})-N(\overline{c_1c_2c_3})$$
+
+\newpage
+
+\subsubsection{Applications of \textbf{PIE} continued...}
+\label{Module 3.1.1}
+
+Sometimes you'll also see \underline{$S_i$}, a representation of the \underline{\textbf{sum of ALL ways}} to satisfy $i$ conditions. 
+    $$N(c_1)+N(c_2)+\space...\space+N(c_n)=\sum^n_{i=1}N(c_i)=S_1$$
+    \begin{itemize}
+        \item This value is not very useful as a final answer. Reason being is a lot of \textcolor{red}{\textbf{over-counting}} is occurring: we cannot guarantee that these cases are separate or distinct, some terms could satisfy multiple conditions and we'll over-count! That's why we have the theorem below to \textit{combine} our last two formulas.
+    \end{itemize}
+
+\vspace{0.25cm}
+
+\textcolor{navy}{\textbf{Theorem}}: Let $A$ be a set and suppose we have $n$ conditions $c_1\to c_n$ satisfied by subsets $A_i \subseteq A$. Then the \textbf{number of elements} in $A$ where \textbf{no conditions} in $c_i$ are satisfied is:
+    $$N(\overline{c_1c_2c_3}\space...\space {c_n})=|A| -\sum_{1\le i\le n} N({c_i})  + \sum_{1\le i\le j \le n}N({c_i c_j})-\space ...\space + (-1)^n N({c_1...c_n})$$
+    $$=N-S_1+S_2-\space...\space+(-1)^nS_n \text{    (nice and short!)}$$
+
+\vspace{0.25cm}
+
+But, our formula still isn't complete! We still want to know how to easily find $N(c_1,\space...\space, c_n)$ or $S_n$.
+
+    \begin{itemize}
+        \item Let's first imagine we have only two conditions out of a total $n$ conditions to exclude from set $A$. This is $S_2$. Then we have $\binom{n}{2}$ ways to exclude two conditions!
+        \item Now, notice that $S_i \to $ (Ways to Choose Conditions) $\cdot$ (Number of ways to define a function without using 2 particular elements).
+        \item Now, if we want to exclude \textbf{two elements} we have: $(n-2)^k$ ways to do so, with $k$ from all the way above as the total elements in our $Y$ \textit{codomain}.
+        \item Put this together and we get:
+            $$S_2=\binom{n}{2}N(c_ic_j)$$
+    \end{itemize}
+
+Our \textbf{general} \textcolor{navy}{\textbf{theorem}} adapts to this (which still counts \textbf{surjections}):
+    $$N(\overline{c_1\space...\space c_n}) = N + \sum^n_{i=1}(-1)^i\binom{n}{i}(n-i)^k= n^k + \sum^n_{i=1}(-1)^i\binom{n}{i}(n-i)^k$$
+
+Hooray! We're done with simple exclusions! More help here: \href{https://gatech.instructure.com/courses/464392/pages/lesson-m3-dot-1-pie-part-i-counting-surjections?module_item_id=5451080}{\textcolor{navy}{3.1 Lecture Videos}}.
+
+
+
+\newpage
+
+\subsection{State and apply the PIE formulas to find the number of objects satisfying at least OR exactly a certain number of conditions. Calculate the number of objects satisfying any given subset of a set of conditions. \textcolor{navy}{\textbf{(MODULE 3.3, 3.4)}}}
+\label{Module 3.2}
+
+\vspace{0.25cm}
+
+How do we solve $x+y+z=12$ where $0\le x\le5, 0 \le y \le 7, 0 \le x \le 6$?
+    \begin{itemize}
+        \item We know that to solve this equation for non-negative integer solutions with no bounds, we can use our \textbf{stars and bars} formula. But, what about with bounds?
+    \end{itemize}
+
+\textcolor{orange}{\textbf{Method}}: Use \textbf{PIE}. Set conditions as: \underline{$c_1:x\ge 6$}, \underline{$c_2:y\ge8$}, and \underline{$c_3:z\ge7$}.
+
+Then, the quantity we desire to find is the number of solutions which violate any of the 3 conditions: $N(\overline{c_1c_2c_3}) = |A| - S_1+S_2-S_3$.
+    \begin{itemize}
+        \item $|A|$ is simply equal to the stars and bars formula or as if our scenario had no conditions at all: $\binom{12+3-1}{3-1}=\binom{14}{2}$.
+        \item $N(c_1)$, or the condition that $x\ge6$ and $y,z\ge0$ can be solved by removing 6 from $x\to x'$ and then also subtracting the total by 8. This gives: $x'+y+z=6,$ or $\binom{12-6+3-1}{3-1}$.
+        \item By the same logic, then $N(c_2)=\binom{6}{2}$ and $N(c_3)=\binom{7}{2}$. 
+        \item $S_1$, the number of elements where 1 condition is satisfied is $\binom{8}{2}+\binom{7}{2}+\binom{6}{2}$. Thus our total is:
+
+        $$N(\overline{c_1c_2c_3})=\binom{14}{2}-S_1=27$$
+    \end{itemize}
+
+\vspace{0.25cm}
+
+\subsubsection{Determining items that satisfy exactly $i$ conditions.}
+\label{Module 3.2.1}
+
+\textcolor{navy}{\textbf{Theorem}}: The number $E_i$ denotes the number of elements in $A$ satisfying \textbf{EXACTLY} $i$ conditions $c_1,...,c_n$:
+    $$E_k=S_k-\binom{k+1}{1}S_{k+1}+\binom{k+2}{3}S_{k+2}-\space...\space+(-1)^{n-k}\binom{n}{n-k}S_n$$
+
+\begin{itemize}
+    \item Remember that $S_i$ has no permanent definition. It really just represents the way to satisfy $i$ conditions by each way with no checks for over-counting. We need to be smart and change $S_i$ to be whatever the question is asking for.
+\end{itemize}
+
+\vspace{0.25cm}
+
+\textcolor{yellow}{\textbf{Example}}: So say we have some $X=\{x_1,x_2,\space...,x_{10}\}$ and $Y=\{y_1,y_2,\space...,y_7\}$. how many functions $f:X\to Y$ have \underline{exactly} 4 elements in their range?
+
+\newpage
+
+Well, let's plug in our formula first:
+    $$E_3=S_3-\binom{3+1}{1}S_{3+1}+\binom{3+2}{3}S_{3+2}-\binom{3+3}{1}S_{3+3}+\binom{3+4}{3}S_{3+4}$$
+
+\vspace{0.25cm}
+
+Then let's start with $S_3$, the sum of ways to satisfy each collection of 3 conditions. Note that it's equivalent to finding $N(c_i,c_j,c_k)$.
+    \begin{itemize}
+        \item We have 7 items in our codomain of $\{y_1,y_2,\space...,y_7\}$. If we remove 3 elements, then we have 7 choose 3 ways to exclude. Then after that we can then have $4^{10}$ ways to create a function with the remaining 4: \underline{$\binom{7}{3} \cdot 4^{10}$}.
+        \item Using the same logic, we see a pattern appear:
+        $$S_4=\binom{7}{4}\cdot3^{10},\space S_5=\binom{7}{5}\cdot2^{10}, \space S_6=\binom{7}{6}\cdot 1^{10}, \space S_7=0$$
+    \end{itemize}
+
+$$\text{Now plug: } E_3=\binom{7}{3} \cdot 4^{10}-\binom{4}{1}\binom{7}{4}\cdot3^{10}+\binom{5}{3}\binom{7}{5}\cdot2^{10}-\binom{6}{1}\binom{7}{6}\cdot 1^{10}+ 0$$
+
+    \begin{center}
+        \noindent\rule{1.0\textwidth}{0.75pt}
+    \end{center}    
+    
+\subsubsection{Calculate the number of objects satisfying any given subset of a set of conditions.}
+\label{Module 3.2.2}
+
+\vspace{0.25cm}
+
+This is the final part of \textbf{PIE}: how can we calculate the number of items in a set which satisfy at least $k$ out of $n$ conditions? Call this number $L_k$:
+    $$L_k=S_k-\binom{k}{k-1}S_{k+1}+\binom{k+1}{k-1}S_{k+2}+\space...\space (-1)^{n-k}\binom{n-1}{k-1}S_n$$
+
+    \vspace{0.25cm}
+
+\begin{itemize}
+    \item \textcolor{lime}{\textbf{REMEMBER}}: Here's a little jingle to help you remember the formulas, \underline{L of K has K minus one, E of K has K plus none}!
+    \item Ultimately, everything else is the same as our formula for $E_k$. Our terms of $S_i$ would even be the same, we just need new coefficients!
+\end{itemize}
+
+\vspace{0.25cm}
+
+Here's a link to extra practice with our formula: \href{https://gatech.instructure.com/courses/464392/pages/lesson-m3-dot-4-pie-part-iii?module_item_id=5465344}{\textcolor{navy}{Module 3.4 Lecture}}.
+
+
+\newpage
+
+\subsection{Use derangements to solve counting problems. \textcolor{navy}{\textbf{(MODULE 3.5)}}}
+\label{Module 3.3}
+
+\vspace{0.25cm}
+
+\textcolor{red}{\textbf{Definition}}: a \textbf{derangement} is a permutation where nothing stays in its original position. Counting all possible \textbf{derangements} of $X$ is equal to saying that some function $f:X\to Y$ where no conditions of $c_1, \space..., c_n$ are satisfied.
+
+\vspace{0.25cm}
+
+\textcolor{navy}{\textbf{Theorem}}: For all $n\ge1$, the \textbf{derangements} of $n$ objects is equal to $[\frac{n!}{e}]$, or the approximation to the nearest integer of $\frac{n!}{e}$.
+    \begin{itemize}
+        \item Remember that \textbf{derangements} can also be expressed as $!n=[\frac{n!}{e}]$.
+    \end{itemize}
+
+\vspace{0.25cm}
+
+\textcolor{red}{\textbf{TRY IT}}: 6 students are taking 2 classes in the same classroom with 6 chairs. When they come into the second class, in how many ways can they sit down so that exactly 2 of them have the same seat for both classes?
+    \begin{itemize}
+        \item First choose which students get to sit in their original seat: $\binom{6}{2}=15$.
+        \item Then derange everyone else (4 remaining students): $!4={\frac{4!}{e}}\approx9$.
+        \item Our total is then: $15 \cdot 9 = 135$ total possibilities. On an exam it's perfectly fine to leave the answer as $\binom{6}{2}[\frac{4!}{e}]$. \textcolor{red}{\textbf{DO NOT}} leave your answer as $\binom{6}{2}\cdot \space!4$.
+    \end{itemize}
+
+    \begin{center}
+        \noindent\rule{1.0\textwidth}{0.75pt}
+    \end{center}   
+
+\newpage
+
+\subsection{Define and describe rook numbers and rook polynomials using appropriate vocabulary and notation. Find the rook polynomial of a reasonably sized chessboard. \textcolor{navy}{\textbf{(Module 3.7)}}}
+\label{Module 3.4}
+
+\vspace{0.25cm}
+
+\textcolor{red}{\textbf{Definition}}: A \underline{Rook Polynomial} is the way to arrange rooks on some chessboard of $C$. It is expressed as $r_k(C)$. Remember that $r_0(C)=1$ always. Now, if we have a $n \times x$ regular, monochrome board our formula for our rook polynomial is:
+    $$r(C_{n\times n})=\sum^n_{k=0}r_kx^k, \space \text{where } r_k=\binom{n}{k}\binom{n}{k}k!$$
+
+\vspace{0.25cm}
+
+\textcolor{red}{\textbf{TRY IT}}: Find the rook polynomial of the chessboard below:
+    \begin{center}
+            \includegraphics[width=0.35\linewidth]{C.png}
+    \end{center}
+\begin{itemize}
+    \item $r_0(C_2)=0$ by convention.
+    \item $r_1(C_2)=4$: we can place a single rook 4 ways, 1 in each square.
+    \item $r_2(C_2)=2$: to place 2 rooks, we must place both in a diagonal.
+    \item $r_3(C_3)=0$: we don't have enough diagonal squares to place 3.
+        $$r(C)=0+4x+2x^2+0\cdot x^3$$
+\end{itemize}
+
+    \begin{center}
+        \noindent\rule{1.0\textwidth}{0.75pt}
+    \end{center}    
+
+\subsubsection{Calculating the Rook Polynomial (Strategies and tips).}
+
+
+
+
+
+
+
+
+
+
+\newpage
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================Section 5=======================
+\section{Module 4 - Overview}
+\label{Module 4}
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================Section 5=======================
+\section{Module 5 - Overview}
+\label{Module 5}
+
+\begin{itemize}
+    \item Correctly use the graph theory terminology, notation, and conventions we have discussed, found at \textcolor{navy}{\autoref{Module 5.1}}.
+    \item State and use the Handshake Lemma, found at \textcolor{navy}{\autoref{Module 5.2}}.
+    \item Determine, with evidence, whether two graphs are isomorphic or homeomorphic, found at \textcolor{navy}{\autoref{Module 5.3}}.
+    \item Understand and apply the properties and characteristics preserved by isomorphic or homeomorphic graphs, found at \textcolor{navy}{\autoref{Module 5.3}}.
+    \item Determine whether a given graph is connected, and how many connected components it contains. Relate connectedness to other properties of the graph, found at \textcolor{navy}{\autoref{Module 5.4}}. 
+    \item Determine, with evidence, the existence or non-existence of Euler trails and circuits in any graph, found at \textcolor{navy}{\autoref{Module 5.5}}. 
+    \item Determine, with evidence, the existence or non-existence of Hamilton cycles and paths in straightforward graphs, found at \textcolor{navy}{\autoref{Module 5.6}}. 
+    \item Define trees, both using our standard definition and the equivalent definitions discussed in the first theorem of M5.6. Be able to convert between different definitions of a tree when a problem calls for a different property, found at \textcolor{navy}{\autoref{Module 5.7}}. 
+    \item Translate correctly between a tree and its Prüfer code (in both directions), found at \textcolor{navy}{\autoref{Module 5.7}}.
+    \item State Cayley's Theorem, and explain in careful terms how Prüfer codes prove the theorem, found at \textcolor{navy}{\autoref{Module 5.8}}. 
+    \item State Kuratowski's Theorem, found at \textcolor{navy}{\autoref{sec:Kuratowski's Theorem}}.
+    \item Determine, with evidence, whether a given graph is planar, found at \textcolor{navy}{\autoref{Module 5.10}}. 
+    \item Know Euler's formulas for planar graphs: $v - e + r = 2$ and 
+    $ e \le 3v - 6$. Be able to apply these formulas, using correct logic in regards to planarity, found at \textcolor{navy}{\autoref{Module 5.10}}. 
+\end{itemize}
+
+\newpage
+
+\subsection{Correctly use the graph theory terminology, notation, and conventions we have discussed. \textcolor{navy}{(MODULE 5.1)}}
+\label{Module 5.1}
+
+\vspace{0.25cm}
+
+\textbf{
+\hspace{-3pt}\textcolor{black}{Remember}}: A graph $G = (V,E)$ is a mathematical definition of a graph where:
+\begin{itemize}
+    
+    \item $V$ is a set of \textit{vertices or nodes}. They are our points of interest connected by the lines.
+    \item $E$ is the set of \textit{edges} between the vertices. They are the lines.
+    
+\end{itemize}
+
+\vspace{0.5cm}
+
+The correct way to write an \underline{edge between vertices of v and w} is: $[v,w]$.
+\begin{itemize}
+    \item Since these two vertices connect, they are neighbors or adjacent.
+    \item We then can say that edge $[v,w]$ is incident to the vertices of v and w.
+\end{itemize}
+
+\vspace{0.5cm}
+
+A \textbf{\underline{Subgraph G}} of $G = (V,E)$ is denoted as $G' = (V', E')$, consists of non-empty vertex and edge sets:
+\begin{itemize}
+    \item $\emptyset \ne V' \subseteq V$ and $E' \subseteq E$ where edges in  $E'$ are incident only to vertices in $V'$.  
+\end{itemize}
+
+\textbf{\textcolor{orange}{Extra Note}}: An edge $[v,v]$ from a vertex $v$ to itself is called a \underline{loop}.
+
+\vspace{0.5cm}
+
+\textbf{\textcolor{red}{IMPORTANT}}: The degree of a vertex $v$ is the number of edges incident to $v$ (how many vertices are touching it). We often write \underline{$deg(v)$} to represent the number of edges touching a vertex of $v$.
+    \begin{itemize}
+        \item If all vertices in $G$ have the same degree of $k$, we say \underline{\textbf{$G$ is k-regular}}, or just regular if we don't want to specify $k$.
+    \end{itemize}
+
+
+\vspace{0.75cm}
+
+% ================= NEW SECTION =================
+\subsection{State and use the Handshake Lemma. \textcolor{navy}{(MODULE 5.1)}}
+\label{Module 5.2}
+\vspace{0.25cm}
+
+\textbf{
+\hspace{-3pt}\textcolor{red}{THEOREM}}: For any graph $G = (V,E)$,
+    $$ \sum_{v \in V} \text{deg}(v) = 2|E|$$
+
+This is the \textbf{\textcolor{orange}{Handshake Lemma}}:
+    \begin{itemize}
+        \item \textbf{This theorem applies to \textcolor{red}{ALL} graphs}! Do not forget this!
+        \item To prove this, we simply count the number of edges in any graph twice. We can also count edges as we iterate through each vertex, giving the left side of the equation. We count every vertex's edge twice, or we end up counting all edges twice since all edges are incident to a vertex.
+    \end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{\textcolor{blue}{Corollary}}: We then can conclude for any $k$-regular graph $G$, we know: 
+        $$|V| \cdot k = 2|E|$$
+    \begin{itemize}
+        \item This is the same statement as the theorem above: in a $k$-regular graph, the degree of each vertex is $k$, so the product $|V| \cdot k$ gives the sum on the left side of the equation. We have just counted every vertex twice again in another way!
+    \end{itemize}
+
+\vspace{0.75cm}
+
+% ================= NEW SECTION =================
+\subsection{Determine, with evidence, whether two graphs are isomorphic or homeomorphic. \textcolor{navy}{(MODULE 5.2, 5.7)}}
+\label{Module 5.3}
+\vspace{0.5cm}
+
+\subsubsection{Graph Families Review}
+
+\hspace{-3pt}We want to separate graphs into families:
+
+\textbf{\textcolor{orange}{Path Graphs}} are just a straight line of vertices. We call a path graph $P_n$ with $n$ vertices in the line.
+
+\vspace{0.25cm}
+
+\begin{center}
+    \includegraphics[width=0.5\linewidth]{5.2 Pathgraphs.png}
+    \label{fig:placeholder}
+\end{center}
+
+\vspace{0.5cm}
+
+\textbf{\textcolor{orange}{Cycle Graphs}} are a connected circle of vertices. We call a cycle graph $C_n$ with $n$ vertices in the graph.
+
+\vspace{0.25cm}
+
+\begin{center}
+    \includegraphics[width=0.5\linewidth]{5.2 Cyclegraphs.png}
+    \label{fig:placeholder}
+\end{center}
+
+\vspace{0.5cm}
+
+\textbf{\textcolor{orange}{Complete Graphs}} are a fully connected graph where every vertex is connected to every other vertex. We call a complete graph $K_n$ with $n$ vertices in the graph.
+
+\vspace{0.25cm}
+
+\begin{center}
+    \includegraphics[width=0.5\linewidth]{5.2 Completegraphs.png}
+    \label{fig:placeholder}
+\end{center}
+
+\vspace{1cm}
+
+\textit{We also have the Petersen Graph as the counterexample graph:}
+
+\vspace{0.25cm}
+
+\begin{center}
+    \includegraphics[width=0.5\linewidth]{Petersen.png}
+    \label{fig:placeholder}
+\end{center}
+
+\vspace{0.5cm}
+
+\subsubsection{Isomorphic graphs (5.2)}
+
+\vspace{0.25cm}
+
+\textbf{\textcolor{red}{Definition}}: a graph $G_1 = (V_1, E_1)$ is isomorphic (defined as $f : V_1 \xrightarrow{} V_2$ to $G_2 = (V_2, E_2)$ if:
+
+\begin{itemize}
+    \item $f$ is a bijection.
+    \item $[v,w] \in E_1$ if and only if $[f(v),f(w)] \in E_2$ for all edges in both graphs. Basically, \textit{all edges have a counterpart in the other graph}.
+\end{itemize}
+\vspace{0.25cm}
+
+Isomorphism is an important notion of "\underline{sameness}:" it essentially says that two graphs can be considered the same if they have the same shape, even when the labels are different. 
+
+\vspace{0.5cm}
+
+\textbf{\textcolor{red}{Method to Disprove}}: $G_1$ and $G_2$ will be isomorphic \textbf{ONLY IF}:
+
+\begin{itemize}
+    \item $|V_1| = |V_2|$
+    \item $|E_1| = |E_2|$
+    \item $G_1$ has a subgraph $H$ if and only if $G_2$ has a subgraph isomorphic to $H$.
+    \item Vertices paired by any isomorphism between the two graphs must have equal degrees. (\textit{This is usually the condition that is failed}).
+    \item \textbf{\textcolor{orange}{NOTE}}: This logic is one directional, we \textbf{\textcolor{red}{CANNOT}} use this logic to prove a isomorphism. Only use this to \textit{disprove} one!
+\end{itemize}
+
+\newpage
+\subsubsection{Homeomorphic graphs (5.7)}
+\vspace{0.25cm}
+
+\textbf{\textcolor{orange}{Background}}: an \textbf{elementary subdivision} is just replacing an edge with vertex and then reconnecting with the disconnected vertices.
+\begin{itemize}
+    \item \textcolor{yellow}{Recall}: an elementary subdivision of $C_n$ gives $C_{n+1}$.
+\end{itemize}
+
+\vspace{0.25cm}
+
+\textbf{\textcolor{red}{Definition}}: Two graphs are homeomorphic if they can be obtained from the same loop-free graph by elementary subdivisions (if you can get them from the same simple graph by repeatedly subdividing edges). 
+\begin{itemize}
+    \item Any pair of isomorphic graphs is also homeomorphic (\textit{aka number of elementary subdivisions is 0}).
+    \item The graphs $P_n$ and $P_k$ are homeomorphic for any $n,k$.
+    \item The graphs $K_3$ and $C_n$ are homeomorphic for any $n$.
+    \item In general, two graphs are homeomorphic if they have the \textbf{same shape} once we \underline{ignore all of the degree 2 vertices in both graphs}.
+\end{itemize}
+
+\vspace{0.25cm}
+\textbf{\textcolor{red}{Theorem}}: If tow graphs are homeomorphic, they are both \textbf{planar} or \textbf{non-planar}.
+
+See~\autoref{sec:Kuratowski's Theorem} for applications of homeomorphism in test questions \textit{(Kuratowski's Theorem)}.
+
+\newpage
+
+% ================= NEW SECTION =================
+\subsection{Determine whether a given graph is connected, and how many connected components it contains. Relate connectedness to other properties of the graph. \textbf{\textcolor{navy}{(MODULE 5.3)}}}
+\label{Module 5.4}
+\vspace{0.5cm}
+
+\textbf{\textcolor{red}{Important}}: A \underline{walk} from some vertex $v$ to $w$ can be written as:
+        $$(v=v_0, e_1, v_1, e_2, v_2, \hspace{3pt}..., e_n, v_n = w$$
+
+\textit{It is also fine to use only vertices in a simple graph, when omitting information doesn't result in any confusion}.
+
+\vspace{0.25cm}
+
+\textbf{\textcolor{red}{Definition}}: Length of a walk is $n$, where $n$ always is the number of steps or \textbf{EDGES} in the walk.
+
+\begin{itemize}
+    \item An \textcolor{orange}{open} walk is when $v \ne w$, basically you don't end up where you were.
+    \item An \textcolor{orange}{closed} walk is when $v=w$, you're where you started.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textit{Here's a nice table to help think about this:}
+
+\vspace{0.1cm}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Can vertices repeat? & Can edges repeat? & Is it open? & Is it closed? \\ \hline
+Yes & Yes & Open Walk & Closed Walk \\ \hline
+Yes & No & Trail & Circuit \\ \hline 
+No ($v_0 = V_n$ excluded) & No &  Path & Cycle \\ \hline
+\end{tabular}
+
+\vspace{0.1cm}
+Remember: \textit{all paths are a trail, but not all trails are paths}. Same for other vertically adjacent columns.
+\begin{itemize}
+    \item It's useful in questions to find a path and compare whether or not its counterpart has the same path. This helps determine isomorphism.
+\end{itemize}
+
+\vspace{0.25cm}
+\textbf{\textcolor{red}{Definition}}: A graph is \textbf{connected} if there is a path from every vertex to every other vertex in $G$. Otherwise, it is \textbf{disconnected}, and each connected subgraph that's as large as possible is called a \textbf{connected component} of $G$. 
+
+We denote the number of connected components of $G$ as $\kappa(G)$. If $G$ has 3 parts, then $\kappa(G) = 3$. When $G$ is fully connected, only then is $\kappa(G) = 1$.
+
+\newpage
+
+% ================= NEW SECTION =================
+\subsection{Determine, with evidence, the existence or non-existence of Euler trails and circuits in any graph. \textbf{\textcolor{navy}{(MODULE 5.4)}}}
+\label{Module 5.5}
+
+\vspace{0.5cm}
+
+\textbf{\textcolor{red}{Definition}}: a graph or multi-graph with no isolated vertices, a circuit that \underline{traverses each edge exactly once} is an \textbf{Euler circuit}. A trail that does this is an \textbf{Euler trail}.
+
+    \begin{itemize}
+        \item \textcolor{yellow}{Recall}: a circuit is when no edges repeat in a closed walk.
+        \item \textcolor{yellow}{Recall}: a trail is when no edges repeat in a open walk.
+    \end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{\textcolor{navy}{Theorem}}: With a graph $G$, $G$ only has an \underline{Euler Circuit} IF:
+\begin{itemize}
+    \item $G$ is connected.
+    \item Every vertex has an \textbf{even degree}.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{\textcolor{red}{TRY IT}}: Look at the graph below, does it have an Euler Circuit?
+\begin{center}
+    \includegraphics[width=0.4\linewidth]{5.4 Ad graph.png}
+    \label{fig:placeholder}
+\end{center}
+
+\vspace{0.25cm}
+
+\textcolor{lime}{Answer}: \textcolor{red}{No}, the vertices all have a degree of 3 which is odd. An Euler Circuit must have all vertices of an even degree.
+
+\vspace{0.5cm}
+
+\textcolor{navy}{METHOD}: the process to check for an Euler Circuit:
+
+\begin{itemize}
+    \item Check that $G$ satisfies the conditions to have an Euler circuit.
+    \item Find a set of circuits that don't share edges and cover all edges of G (just start somewhere, and keep going)
+    \item Attach the circuits together at shared vertices to form an Euler circuit
+\end{itemize}
+
+\newpage
+\
+\textbf{\textcolor{red}{TRY IT}}: Look at the graph below, does it have an Euler Circuit?
+\begin{center}
+    \includegraphics[width=0.75\linewidth]{5.4 Circuitgraph.png}
+    \label{fig:placeholder}
+\end{center}
+
+\vspace{0.25cm}
+
+\textcolor{lime}{Answer}: \textcolor{lime}{Yes}, we can create little sub-circuits where no edges repeat and return to their home vertex. Then, we can stitch these together to create a big circuit. One example would be: $(a,b,g,j,f,b,c,g,k,j,i,f,e,d,b,e,i,h,d,a)$!
+
+\vspace{0.5cm}
+
+\textbf{\textcolor{blue}{Corollary}}: A graph $G$ only has an \textbf{Euler trail} if and only if $G$ has exactly \underline{two vertices of an odd degree}.
+
+\vspace{0.5cm}
+
+\textbf{\textcolor{red}{TRY IT}}: Look at the graph below, does it have an Euler Trail?
+\vspace{0.1cm}
+\begin{center}
+    \includegraphics[width=0.5\linewidth]{Day_20_Graph.png}
+    \label{fig:placeholder}
+\end{center}
+
+\vspace{0.25cm}
+
+\textcolor{lime}{Answer}: \textcolor{lime}{Yes}, we can see that F and N have 5 and 1 degrees respectively. This means we can start at either vertex and create a trail as every other vertex is even in degree.
+
+\vspace{0.25cm}
+
+\textbf{\textcolor{red}{IMPORTANT}}: No graph can have \textbf{BOTH} a \underline{Euler Circuit and Trail}!
+
+\newpage
+
+% ================= NEW SECTION =================
+\subsection{Determine, with evidence, the existence or non-existence of Hamilton cycles and paths in straightforward graphs. \textbf{\textcolor{navy}{(MODULE 5.5)}}}
+\label{Module 5.6}
+
+\vspace{0.5cm}
+
+\textbf{\textcolor{red}{Definition}}: any graph $G$ with \textcolor{navy}{$|V| \geq 3$} that also has a \underline{Hamiltonian cycle} if there exists a cycle in $G$ that \underline{visits each vertex exactly once}. A \underline{Hamiltonian path} is an open walk that \underline{visits each vertex exactly once}.
+
+\vspace{0.25cm}
+
+In effect:
+\begin{itemize}
+    \item We cannot ever have a Hamilton path or cycle that reuses any vertices or edges. 
+    \item If we can find a Hamilton cycle, we can always find a Hamilton path by deleting any edge.
+    \item \textcolor{red}{We have no results that exactly describe when a Hamilton path or cycle exists.} But, we do have some starting points.
+\end{itemize}
+
+\vspace{0.25cm}
+
+\textbf{\textcolor{navy}{Theorem}}: When we have $G = (V, E)$:
+    \begin{itemize}
+        \item If $G$ is not connected, then it can't have any Hamiltons.
+        \item $G$ must first be a cycle- IE. $deg(v) \geq 2$ for all $v \in V$.
+        \item If $deg(v) = 2$ for some $v \in V$, both edges incident to v must be contained in any Hamilton cycle if it exists. If a \textit{vertex has a degree greater than 2}, then it must use 2 edges.
+        \item Then obviously, we use all vertices in $G$.
+    \end{itemize}
+
+\vspace{0.5cm}
+
+\subsubsection{Bipartite Graphs $\And$ Hamiltons}
+\vspace{0.25cm}
+\textbf{\textcolor{orange}{Bipartite Graph}}: Two columns of vertices (or two subsets). No edges connect any of the subset's vertices to its own.
+
+\vspace{0.1cm}
+
+\begin{center}
+        \includegraphics[width=0.75\linewidth]{5.5 Bipartite.png}
+        \label{fig:placeholder}
+\end{center}
+
+\newpage
+
+\textbf{\textcolor{orange}{Proposition}}: If we have a connected \underline{bipartite graph $K_n,_k$} (a bipartite where all vertices in vertex column $n$ are connected to every other vertex in $k$), then:
+    \begin{itemize}
+        \item If $|V_1| \ne |V_2|$, then G cannot have a Hamilton Cycle.
+        \item If G has a Hamilton path, then $||V_1| - |V_2|| \leq 1$. \textit{The converse is not true.}
+    \end{itemize}
+
+\vspace{0.25cm}
+
+\textbf{\textcolor{red}{Theorems}}: Usually if your graph has enough edges relative to the number of vertices and they're reasonably well distributed, there will always be a way to make a Hamilton path/cycle.
+
+\vspace{0.1cm}
+
+    \begin{itemize}
+        \item \underline{Theorem 1}: Let $G = (V,E)$ be a \textbf{loop-free graph} with $|V| = n \geq 2$. Then if $deg(x) + deg(y) \geq n -1$ for all distinct $x,y \in V$, then $G$ has a Hamilton Path.
+        \item \underline{Theorem 2}: If $G$ is loop-free with $|V| = n\geq 3$ and $deg(x) + deg(y) \geq n$ for all non-adjacent $x,y \in V$, then $G$ contains a Hamilton cycle.
+        \item \underline{Theorem 3}: If $G$ is another loop-free graph with $|V|=n\geq 3$ and $|E|\geq C(n-1,2) +2$, then $G$ has a Hamilton cycle.
+        \item \textbf{\textcolor{yellow}{Note}}: this will not be on the exam specifically, but can be very useful!
+    \end{itemize}
+
+\newpage
+
+% ================= NEW SECTION =================
+\subsection{Define trees, both using our standard definition and the equivalent definitions discussed in the first theorem of M5.6. Be able to convert between different definitions of a tree when a problem calls for a different property.  \textbf{\textcolor{navy}{(MODULE 5.6)}}}
+\label{Module 5.7}
+
+\vspace{0.5cm}
+
+\textbf{\textcolor{red}{Definition}}: A \textbf{tree} is a graph where there are \underline{NO CYCLES}. A disconnected graph where every component is a tree is a \textit{forest}. Below, graph 1 and 2 are trees, 3 is not.
+
+    \begin{center}
+        \includegraphics[width=0.5\linewidth]{5.6 Trees.png}
+        \label{fig:placeholder}
+    \end{center}
+
+\vspace{0.25cm}
+
+Trees have special properties that are \underline{defining}:
+    \begin{itemize}
+        \item If you remove a edge in a graph and it becomes disconnected, it is a tree.
+        \item A graph is connected and has $|V| = |E| + 1$, then it's a tree.
+        \item A graph has no cycles and has $|V| = |E| + 1$, then it's a tree.
+        \item When there's only 1 path between any two vertices, then it's a tree.
+    \end{itemize}
+
+    \vspace{0.5cm}
+
+\textbf{\textcolor{yellow}{Note}}: for our other graph families we can label vertices:
+    \begin{itemize}
+        \item For \textbf{complete graphs} $K_n$ there is only one way as it's completely symmetric.
+        \item For \textbf{cycle graphs} $C_n$ there is a circular arrangement divided by the symmetrical opposite, so $(n-1)! \over 2$ ways to label total.
+        \item For \textbf{path graphs}: this was our homework question. It should be $n! \over 2$.
+    \end{itemize}
+
+\vspace{0.25cm}
+
+When counting trees for $n$ labeled vertices, the difficulty is that there are many different shapes (non-isomorphic trees). Even for $n=4$, there are already two different tree shapes. \textit{To count all possible labeled trees, we’d like to avoid dealing with all different shapes individually} so we find a \textbf{bijection} (a perfect pairing) between trees and something easier to count.
+
+\textbf{\textcolor{orange}{CLAIM}}: there is a one-to-one correspondence between
+    \begin{itemize}
+        \item all \textbf{unrooted labeled trees} on $n$ vertices
+        \item all \textbf{strings of length $n-2$} for numbers 1 to $n$
+    \end{itemize}
+
+\newpage
+
+\subsubsection{Creating and reading Prüfer Codes}
+\vspace{0.1cm}
+
+\textbf{\textcolor{navy}{Creation Process}}: 
+    \begin{itemize}
+        \item Remove the smallest degree.
+        \item Append its neighbor to the Prüfer code.
+        \item Repeat until left with largest vertex label.
+    \end{itemize}
+
+    \begin{center}
+        \includegraphics[width=0.85\linewidth]{asdasdasdasdasdd.png}
+        \label{fig:placeholder}
+    \end{center}
+
+\vspace{0.25cm}
+
+\textbf{\textcolor{navy}{Reading Process}}: 
+    \begin{itemize}
+        \item \textcolor{yellow}{Note}: the tree has $n+2$ vertices when given a code of length $n$.
+        \item Attach the lowest available label to our first entry. 
+        \item Then append our label to the code.
+        \item Repeat until we have $n-1$ total vertices, or basically we're missing a single vertex. Then we can attach our missing label to the last original label.
+    \end{itemize}
+
+    \begin{center}
+            \includegraphics[width=0.85\linewidth]{image.png}
+            \label{fig:placeholder}
+    \end{center}
+
+\newpage
+
+% ================= NEW SECTION =================
+\subsection{State Cayley's Theorem, and explain in careful terms how Prüfer codes prove the theorem. \textbf{\textcolor{navy}{(MODULE 5.6)}}}
+\label{Module 5.8}
+
+\vspace{0.5cm}
+
+\textbf{\textcolor{red}{Theorem}}: Cayley's Theorem tells us that the number of unrooted labeled trees on $n$ vertices in $n^{n-2}$.
+\begin{itemize}
+    \item \textit{Keep in mind we only deal with unrooted trees in this course.}
+    \item \textcolor{orange}{Reminder}: Different labels → different trees, even if the shape looks similar.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{\textcolor{lime}{Proof}}: we want to know why Prüfer codes prove \underline{Cayley's Theorem}.
+
+\vspace{0.25cm}
+
+We know that every Prüfer code is a \textbf{bijection} between all labeled trees on $n$ vertices and sequences of length $n-2$ ($1,2, \space...,n$), basically:
+\vspace{0.1cm}
+
+\begin{itemize}
+    \item Since each Prüfer code generates a \textbf{COMPLETELY UNIQUE TREE}.
+    \item We have then $n$ vertices, and our Prüfer code will be of length $n-2$.
+    \item Then, we just have $n$ labels to choose from and $n-2$ slots in our code's total length.
+\end{itemize}
+
+\newpage
+
+% ================= NEW SECTION =================
+\subsection{State Kuratowski's Theorem  \textbf{\textcolor{navy}{(MODULE 5.7)}}}
+\label{sec:Kuratowski's Theorem}
+\vspace{0.25cm}
+
+\textbf{\textcolor{red}{Theorem}}: \textbf{Kuratowski's Theorem} tells us that a graph is non-planar \underline{IF AND ONLY IF} it contains a subgraph that is homeomorphic to $K_5$ or $K_{3,3}$.
+
+\vspace{0.1cm}
+\textcolor{orange}{Example}: Use Kuratowski's theorem to decide whether the Petersen is planar.
+\begin{center}
+        \includegraphics[width=0.3\linewidth]{Petersen-1.png}
+        \label{fig:placeholder}
+\end{center}
+
+\begin{itemize}
+    \item We can't find any subgraph isomorphic to $K_5$, we know that $K_5$ has degree of $(n-1)=4$ for all vertices: a $4$-regular graph. All degrees in the Petersen is $3$-regular. \textcolor{red}{No subgraph can exist}.
+    \item Deleting the edges $[7,9]$ and $[3,8]$ for clarity and rearranging vertices, we can see that $P$ has a subgraph homeomorphic to $K_{3,3}$, thus the Petersen graph is not planar ({$(10,5),(5,1),(1,6),(6,9),(9,4)$} is one example),
+\end{itemize}
+\vspace{0.1cm}
+\begin{center}
+        \includegraphics[width=0.35\linewidth]{Petersen_K33.png}
+        \label{fig:placeholder}
+\end{center}
+
+\vspace{0.25cm}
+
+\underline{Kuratowski's theorem} is our best way to find out whether a graph is planar or not. \textcolor{yellow}{Note}: \textit{you will not be asked for questions as complex as the Petersen}.
+
+
+\newpage
+% ================= NEW SECTION =================
+\subsection{Determine, with evidence, whether a given graph is planar $\And$ Know Euler's formulas for planar graphs: $v - e + r = 2$ and $ e \le 3v - 6$. Be able to apply these formulas, using correct logic in regards to planarity. \textbf{\textcolor{navy}{(MODULE 5.7)}}}
+\label{Module 5.10}
+\vspace{0.25cm}
+
+\textbf{\textcolor{red}{Definition}}: a \underline{planar graph} is a graph where none of its edges intersect excluding at vertices. \textit{The graphs below are planar as it has no edges that cross}.
+
+\begin{center}
+        \includegraphics[width=0.3\linewidth]{5.2 Cyclegraphs.png}
+        \label{fig:placeholder}
+\end{center}
+
+\textbf{\textcolor{orange}{IMPORTANT}}: \textit{a graph can be planar with crossing edges}! We can't always immediately tell. So here's a process to find planarity (so called \underline{\textbf{screening}} or looking for properties that planar graphs must have. If a graph doesn't have said property, it's non-planar):
+    \begin{itemize}
+        \item Look at how the graph divides the plane into different regions. Then we have this theorem:
+
+        \textcolor{navy}{\textbf{Euler's Theorem}}: Let $G$ be a connected, loop-free planar graph or multi-graph with, and let $r$ be the number of regions a planar sketch of the graph divides the plane into (including the infinite region outside the graph). Then:
+        $$|V|-|E|+r=2$$
+
+        \item \textcolor{orange}{\textbf{Corollary}}: Under the same conditions as above, if $e\geq 2$ then $3r \leq2e$ and $e \leq 3v-6$. \textit{This is oftentimes more useful.}
+        
+    \end{itemize}
+\vspace{0.25cm}
+Now what does this mean? IF we have \underline{too many edges for the number of vertices} (\textit{easy}) or make an argument that a planar sketch would have \underline{too many regions} (\textit{harder}), we can then say $G$ is \textbf{not planar}.
+
+\vspace{0.3cm}
+\textcolor{lime}{\textbf{Exam-Knows}}: 
+    \begin{itemize}
+        \item All Cyclic ($C_n$) and Path ($P_n$) graphs are planar.
+        \item Only Complete graphs of $n\leq4$ are planar. Otherwise, it is non-planar.
+        \item Remember \textit{Kuratowski's Theorem}: it is not planar if it contains the subgraph of $K_5$ or $K_{3,3}$.
+    \end{itemize}
+
+\newpage
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================================================
+% ======================Section 6=======================
+\section{Module 6 - Overview}
+\label{Module 6}
+    \begin{itemize}
+        \item Given a planar graph, find its dual, found at \textcolor{navy}{\autoref{Module 6.1}}. 
+        \item Define a proper coloring, and be able to give an example, found at \textcolor{navy}{\autoref{Module 6.2}}.  
+        \item Define colorability, and determine whether a given graph is $k$-colorable for a given integer $k$, found at \textcolor{navy}{\autoref{Module 6.2}}.  
+        \item Understand that graphs are bipartite if and only if they are 2-colorable, and use this equivalence, found at \textcolor{navy}{\autoref{Module 6.3}}.  
+        \item Find the chromatic number of a given graph, with complete and rigorous justification, found at \textcolor{navy}{\autoref{Module 6.4}}. 
+        \item Find the chromatic polynomial of a given graph, with complete and rigorous justification. Be able to use both cases and deletion-contraction as necessary to accomplish this, found at \textcolor{navy}{\autoref{Module 6.5}}.  
+        \item Define the Ramsey number $R(n,k)$, found at \textcolor{navy}{\autoref{Module 6.6}}. 
+        \item Use given Ramsey numbers to draw conclusions about a graph, found at \textcolor{navy}{\autoref{Module 6.6}}.  
+    \end{itemize}
+
+\newpage
+
+% ================= NEW SECTION =================
+\subsection{Given a planar graph, find its dual. \textbf{\textcolor{navy}{(MODULE 6.1)}}}
+\label{Module 6.1}
+\vspace{0.25cm}
+
+\textbf{\textcolor{red}{BIG QUESTION}}: How many colors are needed to color the regions of a graph so no adjacent regions are the same color? \textit{Below is an example of a properly colored graph}.
+
+\vspace{0.1cm}
+\begin{center}
+        \includegraphics[width=0.4\linewidth]{asdasdasdasdimage.png}
+        \label{fig:placeholder}
+\end{center}
+
+\vspace{0.1cm}
+To easily answer this question of coloring, we will need to use \textbf{planar duals}.
+
+\vspace{0.1cm}
+
+\textbf{\textcolor{red}{Definition}}: a \underline{Planar Dual Graph} $G^d$ of a planar graph or multi-graph $G$ is obtained by putting down a vertex in every region, then connecting edges for all the regions this respective vertex touches.
+    \begin{itemize}
+        \item \textcolor{yellow}{Note}: regions cannot touch at vertices.
+        \item The outside region is also a region.
+    \end{itemize}
+
+\vspace{0.25cm}
+\textbf{\textcolor{orange}{Example}}: Let's find the planar dual of $G$ below:
+\begin{center}
+    \includegraphics[width=0.35\linewidth]{asdjadasjdoiqjwoejiqe.png}
+    \label{fig:placeholder}
+\end{center}
+
+\vspace{0.1cm}
+$$\text{You may also say that } (G^d)^d=G.$$
+
+
+
+\newpage
+
+
+% ================= NEW SECTION =================
+\subsection{Define a proper coloring, and be able to give an example. Define colorability, and determine whether a given graph is $k$-colorable for a given integer $k$.\textbf{\textcolor{navy}{(MODULE 6.2)}}}
+\label{Module 6.2}
+
+\vspace{0.25cm}
+
+\textbf{\textcolor{red}{Definition}}: A \underline{proper of coloring} of $G$ is a function of $V$ to a set {$1,2,3,\space...,k$} so that $f(v)\ne f(w)$ whenever $[v,w]\in E$.
+\begin{itemize}
+    \item If a proper coloring of $G$ is made with $k$ colors $\xrightarrow{}$  $G$ is \textbf{$k-$colorable}.
+    \item If a coloring of $G$ is made with $k$ colors available $\xrightarrow{}$  it's called a $k-$coloring.
+\end{itemize}
+
+\vspace{0.25cm}
+
+\textbf{\textcolor{navy}{Theorem}}: Every \textbf{planar} graph is \underline{4-colorable}. We don't always need 4 colors!
+    \begin{itemize}
+        \item Also all graphs are $|V|-$colorable, just give each vertex a color.
+        \item Being \textit{$k-$colorable} doesn't mean you need all $k$ colors, it's just that you have $k$ choices of colors. \textcolor{orange}{Proposition}: if $G$ is $k-$colorable, then $G$ is also $k+1$ colorable.
+    \end{itemize}
+
+\vspace{0.25cm}
+
+\textbf{\textcolor{red}{Definition}}: $\chi(x)$ is the smallest number of colors that can color $G$.
+\vspace{0.1cm}
+\textbf{\textcolor{orange}{Examples}}: 
+\begin{itemize}
+    \item $\chi(K_n)=n$ for all $n$ in a \underline{complete graph}. 
+    \item In any $G$ with \underline{$|E|=0$}, then $\chi(G)=1$. When we don't have edges there's no need for coloring.
+    \item In any $P_n$ \underline{path graph} and $n\ge2$, then $\chi(P_n)=2$.
+    \item In any $C_n$ \underline{cycle graph}, if $n$ \textit{is odd} then $\chi(C_n)=3$. If $n$ \textit{is even} then $\chi(C_n)=2$. \textit{The odd case is shown below}.
+\end{itemize}
+
+\begin{center}
+    \includegraphics[width=0.25\linewidth]{6.2 Oddcycle.png}
+    \label{fig:placeholder}
+\end{center}
+
+\vspace{0.1cm}
+
+\textbf{\textcolor{orange}{IMPORTANT}}: The Petersen's minimum coloring of \underline{$\chi(P)=3$}. Realize that $P$ contains a $5-$cycle and its inner vertices only touch 3 others $\xrightarrow{}$ \textit{we have the example below}.
+
+\begin{center}
+    \includegraphics[width=0.2\linewidth]{images.png}
+    \label{fig:placeholder}
+\end{center}
+
+\vspace{0.1cm}
+
+\textcolor{red}{\textbf{Important}}: Our best tool to find if $G$ \underline{\textcolor{red}{IS NOT}} $k-$colorable is to find a \textbf{subgraph} in $G$ that is not $k-$colorable.
+
+
+\newpage
+
+% ================= NEW SECTION =================
+\subsection{Understand that graphs are bipartite if and only if they are 2-colorable, and use this equivalence. \textbf{\textcolor{navy}{(MODULE 6.3)}}}
+\label{Module 6.3}
+
+\vspace{0.25cm}
+
+\textcolor{navy}{\textbf{Theorem}}: Any $G$ with at least 2 vertices is 2-colorable if and only if it's a \textcolor{orange}{bipartite}. This theorem then has a more \textit{mathematical} expression:
+    \begin{itemize}
+        \item \textcolor{orange}{Corollary}: any bipartite graph with total vertices $|V|\ge2$ and total edges $|E|\ge1$ has $\chi(G)=2$.
+    \end{itemize}
+
+\vspace{0.1cm}
+
+\textbf{\textcolor{red}{Recall}}: a \textbf{Chromatic Number} is just the minimum $k$ colors to color $G$.
+
+\vspace{0.25cm}
+
+Another important theorem of bipartite graphs is this:
+\begin{itemize}
+    \item \textcolor{navy}{\textbf{Theorem}}: if have cycle of more than 3 vertices in a \underline{bipartite graph}, then your cycle of $C_n$ will have an \textit{even} amount of vertices. \textbf{So $n$ is even}.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\begin{center}
+    \includegraphics[width=0.5\linewidth]{6.3 Hamiltongraph.png}
+    \label{fig:placeholder}
+\end{center}
+
+\vspace{0.1cm}
+
+Notice that this graph's \textbf{chromatic number} is 2, or it's \underline{2-colorable}.
+
+\vspace{0.1cm}
+
+\textcolor{lime}{\textbf{Exam-Know}}: You can use colorings to determine the existence of \textit{Hamilton paths}, for instance above:
+    \begin{itemize}
+        \item We know there are \textit{4 pink} and \textit{6 blank} vertices.
+        \item But, to create proper Hamilton path we must alternate between colors.
+        \item We can't do this since $6-4>1$.
+        \item \textcolor{orange}{\textbf{Proposition}}: for any $2-$colorable graph, we must have an $a$ and $b$ differently colored vertices such that: $|a|-|b|\leq1$.
+    \end{itemize}
+
+\newpage
+
+% ================= NEW SECTION =================
+\subsection{Find the chromatic number of a given graph, with complete and rigorous justification. \textbf{\textcolor{navy}{(MODULE 6.4)}}}
+\label{Module 6.4}
+
+\vspace{0.25cm}
+
+\textcolor{orange}{\textbf{BIG QUESTION}}: How many proper $k-$colorings of a colorable graph $G$ exist?
+    \begin{itemize}
+        \item \textcolor{yellow}{Note}: for a \textit{coloring} to be different, we need 1 vertex to have a new color.
+        \item \textcolor{yellow}{Note}: We'll also use $\lambda$ to denote the number of available colors.
+    \end{itemize}
+
+\vspace{0.1cm}
+
+\textcolor{lime}{Cases}: Some important cases for illustration are
+    \begin{itemize}
+        \item If $G$ has a \textit{\textbf{single vector}}, there are $\lambda$ ways to color.
+        \item If $G$ has \underline{\textbf{n vertices and no edges}}, then we need to choose a color for each vertex: we have $\lambda^n$ possible colorings from the product rule.
+        \item For \textbf{\underline{Path $P_n$}}, we choose the 1st vertex to color. This has $\lambda$ ways to color. Then we color all following vertices in the line: each has $(\lambda-1)$ choices for $n-1$ vertices: in total we have \underline{$\lambda(\lambda-1)^{n-1}$}.
+    \end{itemize}
+
+\vspace{0.25cm}
+
+\textcolor{red}{\textbf{Definition}}: The \underline{\textbf{chromatic polynomial}} $P(G,\lambda)$ of a graph $G$ is the number of proper colorings of $G$ using $\lambda$ colors.
+    \begin{itemize}
+        \item \textcolor{lime}{\textbf{Case}}: For \textbf{Cycle Graphs}, $P(C_n,\lambda)=(\lambda-1)^{n} + (-1)^n(\lambda-1)$.
+        \item \textcolor{lime}{\textbf{Case}}: For \textbf{Path Graphs}, $P(P_n,\lambda)=\lambda(\lambda-1)^{n-1}$.
+        \item \textcolor{lime}{\textbf{Case}}: For \textbf{Complete graphs}, we have: 
+    \end{itemize}
+
+$$p(K_n,\lambda)=\lambda(\lambda-1)(\lambda-2)(...)(\lambda-(n-1))={{\lambda!}\over(\lambda-n)!}$$
+
+\vspace{0.25cm}
+
+\textcolor{orange}{\textbf{Example}}: Find the chromatic polynomial of the graph $G$ below:
+
+    \begin{center}
+        \includegraphics[width=0.25\linewidth]{6.4 Example.png}
+        \label{fig:placeholder}
+    \end{center}
+
+\begin{itemize}
+    \item The isolated vertex has $\lambda$. The two vertices have $\lambda*(\lambda-1)$. The 4 together have $\lambda(\lambda-1)^2(\lambda-2)$.
+    \item Together: $P(G,\lambda)=\lambda^3(\lambda-1)^3(\lambda-2)$
+\end{itemize}
+
+
+\newpage
+
+% ================= NEW SECTION =================
+\subsection{Find the chromatic polynomial of a given graph, with complete and rigorous justification. Be able to use both cases and deletion-contraction as necessary to accomplish this.  \textbf{\textcolor{navy}{(MODULE 6.5, 6.6, 6.7)}}}
+\label{Module 6.5}
+
+\vspace{0.25cm}
+
+\subsubsection{Chromatic Polynomial Rules. \textcolor{navy}{(Module 6.5)}}
+
+\textcolor{orange}{\textbf{Chromatic Rules}}: Let $G$ be our graph with $|V|=n$. Then all statements are true for our poly of $\lambda^n-c_1\lambda^{n-1}+c_2\lambda^{n-2}...$:
+
+    \begin{itemize}
+        \item The \textit{Chromatic polynomial} $P(G,\lambda)$ has degree n.
+        \item The coefficient of $\lambda^n$ is always 1.
+        \item All coefficients in $P(G,\lambda)$ are integers, with alternating signs.
+        \item The coefficient of $\lambda^{n-1}$ is equal to $-|E|$. (This is \underline{$c_1$} in our example above).
+        \item The constant term of $P(G,\lambda)$ is always 0.
+        \item If $|E| > 0$, then all the coefficients in $P(G,\lambda)$ sum to 0.
+    \end{itemize}
+
+\vspace{0.1cm}
+
+\begin{center}
+    \textit{These are great} \textcolor{yellow}{sanity checks} \textit{on tests}.
+\end{center}
+\vspace{0.1cm}
+
+\textcolor{red}{\textbf{Recall}}: The \textbf{chromatic number} $\chi(G)$ is the smallest number of colors needed for a proper coloring. The \textbf{chromatic polynomial} $P(G,\lambda)$ is the number of ways $G$ can be colored with \underline{at most} $\lambda$ colors.
+
+\vspace{0.25cm}
+
+\textcolor{orange}{\textbf{Proposition}}: For any graph $G$ with chromatic polynomial $P(G,\lambda)$, $\chi(G)$ is the \textbf{smallest positive integer} $k$ for which $P(G,k) > 0$.
+    \begin{itemize}
+        \item \textcolor{yellow}{\textbf{Corollary}}: This also means that every chromatic polynomial has roots at $1,2,3,...,k-1$.
+        \item \textcolor{red}{\textbf{Example}}: The chromatic polynomial of $\lambda(\lambda-1)^3(\lambda-2)^2(\lambda-3)$ is 4, or $\chi(G)=4$.
+    \end{itemize}
+
+\vspace{0.25cm}
+
+\textcolor{lime}{\textbf{Exam-Know}}: The number of \textbf{connected components} is given by the exponent of $\lambda$. This is as we only have a $\lambda$ term if we have a \textbf{starting point} to color.
+    \begin{itemize}
+        \item \textcolor{orange}{\textbf{Example}}: The number of connected components or $\kappa(G)$ of $\lambda^2(\lambda-1)^3(\lambda-2)^2(\lambda-3)$ is 2. Expressed as $\kappa(G)=2$.
+    \end{itemize}
+
+\newpage
+
+\subsubsection{Finding the Chromatic Polynomial using cases. \textcolor{navy}{(Module 6.6)}}
+
+\vspace{0.25cm}
+
+We have two main methods of creating Chromatic Polynomials: \textcolor{lime}{\textbf{Cases}} and \textcolor{red}{\textbf{deletion-contraction}}.
+
+\textcolor{lime}{\textbf{Cases}}: Sometimes, our vertices may be colored differently depending on other colorings. For example, in $C_4$ coloring from vertex 1:
+    \begin{center}
+            \includegraphics[width=0.2\linewidth]{6.6 C4.png}
+            \label{fig:placeholder}
+    \end{center}
+    \begin{itemize}
+        \item Vertices $1,2,3$ are very straightforward: $\lambda(\lambda-1)(\lambda-1)$.
+        \item \textbf{However}, once we get to vertex 4, we can have either ($\lambda-1$) or ($\lambda-2$) choices, depending on whether or not \textit{vertex 1 and 3 share the same color}.
+        \item \textcolor{lime}{Solution}: Have two cases where vertex 4 may either be $(\lambda-1)$ or $(\lambda-2)$. Remember that if both vertices are the same color, \textit{they share a term in the polynomial} (vertices 1 and 3 both are accounted by $\lambda$). So then our Polynomial becomes:
+    \end{itemize}
+
+    $$P(C_4,\lambda)=\lambda(\lambda-1)^2 + \lambda(\lambda-1)(\lambda-2)^2$$
+\vspace{0.25cm}
+
+\textcolor{red}{\textbf{TRY IT}}: Find the Chromatic Polynomial of $C_5$:
+    \begin{center}
+        \includegraphics[width=0.2\linewidth]{6.6 C5.png}
+        \label{fig:placeholder}
+    \end{center}
+
+\vspace{0.1cm}
+
+\begin{itemize}
+    \item Notice we have 3 possibilities: Vertices (1,3) share colors, (1,4) share colors, or (1,3,4) all are different.
+    \item \textcolor{lime}{\textbf{Case (1,3)}}: \textit{Vertex 1 \textbf{AND} 3} has $\lambda$ ways to color, then \textit{Vertex 2 is} $\lambda-1$, \textit{Vertex 4} is $\lambda-1$, and \textit{Vertex 5} is $\lambda-2$. Total: \underline{$\lambda(\lambda-1)^2(\lambda-2)$}.
+    \item \textcolor{lime}{\textbf{Case (1,4)}}: This is the same but mirrored as \textcolor{lime}{\textbf{Case (1,3)}}, so: \underline{$\lambda(\lambda-1)^2(\lambda-2)$}.
+    \item \textcolor{lime}{\textbf{Case (1,3,4)}}: We will have $\lambda$ to represent the choices for vertices 1. Then we have $\lambda-1$ choices to each represent vertex 2. Then $\lambda-2$ for 3, 4, and 5 each. This results: \underline{$\lambda(\lambda-1)(\lambda-2)^3$}.
+\end{itemize}
+
+\vspace{0.1cm}
+In total, we add our cases to get the total of: 
+
+$$P(C_5,\lambda)=\lambda(\lambda-1)(\lambda-2)^3+2\lambda(\lambda-1)^2(\lambda-2)$$
+
+\newpage
+
+\subsubsection{Finding the Chromatic Polynomial using Deletion-Contraction. \textcolor{navy}{(Module 6.7)}}
+
+\vspace{0.25cm}
+
+\textcolor{red}{\textbf{Deletion}}: When we remove an edge called $e$. This graph is denoted as $G_e$, the operation as $G-e$ or $G \backslash e$ or $\{V,E-\{e\}\}$.
+
+\textcolor{orange}{\textbf{Contraction}}: When we remove an edge and fuse the two vertices together. Results in $G'_e=G/e$.
+
+\vspace{0.25cm}
+
+\textcolor{red}{\textbf{TRY IT}}: Let's delete and contract the edge $e$ below.
+    \begin{center}
+        \includegraphics[width=0.2\linewidth]{6.7 C4edge.png}
+        \label{fig:placeholder} $\rightarrow$ \includegraphics[width=0.15\linewidth]{6.7 C4deleted.png}
+        \label{fig:placeholder} $\rightarrow$ \includegraphics[width=0.17\linewidth]{6.7 C4contracted.png}
+        \label{fig:placeholder}
+    \end{center}
+
+Now how would we color $G\backslash e$ and $G/e$ in relation to $G$? We have a convenient \textcolor{navy}{\textbf{THEOREM}} to explain how:
+    $$\underline{P(G_e,\lambda)=P(G,\lambda)+P(G'_e,\lambda)}$$
+
+This can be rearranged to:
+    $$\underline{P(G,\lambda)=P(G_e,\lambda)-P(G'_e,\lambda)}$$
+
+\vspace{0.25cm}
+
+\textbf{\textcolor{orange}{Proposition}}: For all $n\ge3$:
+    $$P(C_n,\lambda)=P(P_n,\lambda)-P(C_{n-1},\lambda)=(\lambda-1)^n+(-1)^n(\lambda-1)$$
+
+\textcolor{red}{\textbf{TRY IT}}: Now let's apply this to the $G$ below:
+
+\begin{center}
+    \includegraphics[width=0.3\linewidth]{6.7realpractice.png}
+\end{center}
+    \begin{itemize}
+        \item If we choose to exclude $e=[b,f]$: the graph is \textbf{isomorphic} to $C_6$. Plug into formula: \underline{$P(C_6,\lambda)=(\lambda-1)^6+(\lambda-1)$}
+        \item If we choose to exclude anything else, we'll do more work. If we remove $e=[c,g]$ then we are left with a \textbf{4-cycle} and an extra edge of $\lambda-2$. If we delete that same edge, we're left with two vertices of both $\lambda-1$. We can just use this then: 
+    \end{itemize}
+\vspace{0.1cm}
+    $$P(G,\lambda)=P(G_e,\lambda)-P(G'_e,\lambda)$$
+    $$=\underline{[(\lambda-1)^4+(\lambda-1)^2](\lambda-1)^2-[(\lambda-1)^4+(\lambda-1)](\lambda-2)}$$
+
+\newpage
+
+% ================= NEW SECTION =================
+\subsection{Define the Ramsey number $R(n,k)$. Use given Ramsey numbers to draw conclusions about a graph. \textbf{\textcolor{navy}{(MODULE 6.8, 6.9)}}}
+\label{Module 6.6}
+
+\vspace{0.25cm}
+
+\textcolor{red}{\textbf{Definition}}: A set of vertices is \textbf{independent} if no vertices are adjacent.
+
+\begin{itemize}
+    \item This entails that \textbf{Independent Sets} in a complete graph may only have 1 vertex, path graphs and even-length cycles may only have every other vertex, and a properly colored graph can have any single color.
+\end{itemize}
+
+\vspace{0.1cm}
+
+\textcolor{lime}{\textbf{Conceptualize}}: Drawing a graph on 6 vertices with no triangle and no independent set of size 3 is equivalent to 2--coloring the edges of the complete graph $K_6$ so that no monochromatic triangle appears. 
+
+Interpret one color (say orange) as ``edge'' and the other color (black) as ``non-edge.'' An orange triangle corresponds to a triangle in the graph, while a black triangle corresponds to an independent set of three vertices. Thus, avoiding both structures is the same as avoiding triangles of either color. 
+
+Let's introduce another \textcolor{navy}{\textbf{THEOREM}}: \textbf{Ramsey's Theorem} tell us that for any \textit{positive ints}. of $n,k$ there exists a smallest integer $R(n,k)=R(k,n)$ such that any graph $G$ with $|V|\ge R(n,k)$ contains a subgraph isomorphic to $K_n$ or an independent set of size $k$.
+
+\textbf{\textcolor{yellow}{Conclusion}}: any 2--coloring of $K_6$ contains a monochromatic triangle, or, $R(3,3)=6$. Basically $K_6$ is the smallest complete graph of all $K_n$ to have either a isomorphic subgraph of $K_3$ colored as \textcolor{orange}{\textbf{orange}} or another $K_3$ as \textbf{black}.
+
+\begin{center}
+    \textcolor{yellow}{\textbf{Note}}: \textit{You will not be asked to compute $R(n,k)$ as it's so intensive.}
+\end{center}
+
+\vspace{0.25cm}
+
+So what use are \underline{Ramsey Numbers}? (They can show complete graph behavior). 
+    \begin{itemize}
+        \item \textcolor{red}{\textbf{Example}}: Suppose $G$ has $|V|\ge R(3,5)$ where in any set of 3 vertices, at least two of them are adjacent. Is $G$ planar?
+
+        The answer is \textcolor{red}{no}. Since at least two vertices are adjacent out of 3, then no independent set of 3 vertices may exist. That means that there may only be a subgraph isomorphic to $K_5$ within $G$, and by \textbf{Kuratowski's theorem}, $G$ is not planar.
+
+        \item \textcolor{red}{\textbf{Example}}: Suppose $G$ is a graph with $|V|=7$ that does not contain any triangles. Prove that $G$ is 5-colorable.
+
+        Since $|V|>R(3,3) = 6$, then we know that the Ramsey condition of $R(3,3)$ applies to $G$. That is, either we must have a \textbf{triangle} or we must have an \textbf{independent set of 3 vertices}. Since the question told us we don't have a triangle, then we must have an independent set of 3 vertices. We can use the same color for all 3 independent vertices. Then, we have $7-3=4$ remaining vertices. We must use 4 different colors for these in the worst case, so $G$ must always be $4+1=5-$colorable.
+
+    \end{itemize}
+
+\newpage
+\textcolor{white}{.}
+
+\vspace{12cm}
+
+    \begin{center}
+            \includegraphics[width=0.5\linewidth]{our brains.png}
+    \end{center}
+
+\end{document}
