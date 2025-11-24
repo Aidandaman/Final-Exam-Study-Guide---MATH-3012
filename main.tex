@@ -700,21 +700,25 @@ Then, the quantity we desire to find is the number of solutions which violate an
         \item $|A|$ is simply equal to the stars and bars formula or as if our scenario had no conditions at all: $\binom{12+3-1}{3-1}=\binom{14}{2}$.
         \item $N(c_1)$, or the condition that $x\ge6$ and $y,z\ge0$ can be solved by removing 6 from $x\to x'$ and then also subtracting the total by 8. This gives: $x'+y+z=6,$ or $\binom{12-6+3-1}{3-1}$.
         \item By the same logic, then $N(c_2)=\binom{6}{2}$ and $N(c_3)=\binom{7}{2}$. 
-        \item $S_1$, the number of elements where 1 condition is satisfied is $\binom{8}{2}+\binom{7}{2}+\binom{6}{2}$. Thus our total is:
+        \item $S_1$, the number of elements where 1 condition is satisfied is $\binom{8}{2}+\binom{7}{2}+\binom{6}{2}$. Since \textbf{no two conditions can be true} at once, our total is:
 
         $$N(\overline{c_1c_2c_3})=\binom{14}{2}-S_1=27$$
     \end{itemize}
 
 \vspace{0.25cm}
 
-\subsubsection{Determining items that satisfy exactly $i$ conditions.}
+    \begin{center}
+        \noindent\rule{1.0\textwidth}{0.75pt}
+    \end{center}   
+
+\subsubsection{Determining items that satisfy exactly $k$ conditions.}
 \label{Module 3.2.1}
 
-\textcolor{navy}{\textbf{Theorem}}: The number $E_i$ denotes the number of elements in $A$ satisfying \textbf{EXACTLY} $i$ conditions $c_1,...,c_n$:
+\textcolor{navy}{\textbf{Theorem}}: The number $E_k$ denotes the number of elements in $A$ satisfying \textbf{EXACTLY} $k$ conditions $c_1,...,c_n$:
     $$E_k=S_k-\binom{k+1}{1}S_{k+1}+\binom{k+2}{3}S_{k+2}-\space...\space+(-1)^{n-k}\binom{n}{n-k}S_n$$
 
 \begin{itemize}
-    \item Remember that $S_i$ has no permanent definition. It really just represents the way to satisfy $i$ conditions by each way with no checks for over-counting. We need to be smart and change $S_i$ to be whatever the question is asking for.
+    \item Remember that $S_k$ has no \textcolor{red}{permanent definition}. It really just represents the way to satisfy $i$ conditions by each way with no checks for over-counting. We need to be smart and change $S_k$ to be whatever the question is asking for.
 \end{itemize}
 
 \vspace{0.25cm}
@@ -798,7 +802,7 @@ Here's a link to extra practice with our formula: \href{https://gatech.instructu
 \vspace{0.25cm}
 
 \textcolor{red}{\textbf{Definition}}: A \underline{Rook Polynomial} is the way to arrange rooks on some chessboard of $C$. It is expressed as $r_k(C)$. Remember that $r_0(C)=1$ always. Now, if we have a $n \times x$ regular, monochrome board our formula for our rook polynomial is:
-    $$r(C_{n\times n})=\sum^n_{k=0}r_kx^k, \space \text{where } r_k=\binom{n}{k}\binom{n}{k}k!$$
+    $$r(C_{n\times n},x)=\sum^n_{k=0}r_kx^k, \space \text{where } r_k=\binom{n}{k}\binom{n}{k}k!$$
 
 \vspace{0.25cm}
 
@@ -807,11 +811,11 @@ Here's a link to extra practice with our formula: \href{https://gatech.instructu
             \includegraphics[width=0.35\linewidth]{C.png}
     \end{center}
 \begin{itemize}
-    \item $r_0(C_2)=0$ by convention.
-    \item $r_1(C_2)=4$: we can place a single rook 4 ways, 1 in each square.
-    \item $r_2(C_2)=2$: to place 2 rooks, we must place both in a diagonal.
-    \item $r_3(C_3)=0$: we don't have enough diagonal squares to place 3.
-        $$r(C)=0+4x+2x^2+0\cdot x^3$$
+    \item $r_0(C)=0$ by convention.
+    \item $r_1(C)=4$: we can place a single rook 4 ways, 1 in each square.
+    \item $r_2(C)=2$: to place 2 rooks, we must place both in a diagonal.
+    \item $r_3(C)=0$: we don't have enough diagonal squares to place 3.
+        $$r(C,x)=1+4x+2x^2+0\cdot x^3$$
 \end{itemize}
 
     \begin{center}
@@ -819,6 +823,52 @@ Here's a link to extra practice with our formula: \href{https://gatech.instructu
     \end{center}    
 
 \subsubsection{Calculating the Rook Polynomial (Strategies and tips).}
+
+\textcolor{lime}{\textbf{EXAM-KNOW}}: Now if we don't have a simple monochrome board, we have two majors strategies:
+    \begin{itemize}
+        \item \textbf{Reducing} a chessboard to smaller sub-boards that multiply to give our bigger board. \textit{We should note that we cannot reduce our chessboard more than once, it doesn't quite work that way.}
+        \item \textbf{Rearranging} the columns and rows into a easier to compute board.
+    \end{itemize}
+
+\newpage
+
+Let's start with \textcolor{yellow}{\textbf{Reducing}} a board. Say we have the $4 \times 4$ board below.
+    \begin{center}
+            \includegraphics[width=0.35\linewidth]{C_Subdivision (2).png}
+    \end{center}
+
+
+We can think of the board like this instead:
+\begin{center}
+        \includegraphics[width=0.45\linewidth]{C_Subdivision (3).png}
+\end{center}
+
+What we've done is divide this board into two smaller $2\times2$ boards. When we \textbf{multiply} their respective rook polynomials together, we will get the bigger board.
+    $$r(C,x)=(1+4x+2x^2)\cdot(1+3x+x^2)=1+7x+15x^2+10x^3+2x^4$$
+
+\vspace{0.25cm} 
+
+Now let's look at \textcolor{navy}{\textbf{Rearranging}} the board. Suppose we have this board below and wish to find the way to place in \textbf{black squares} indicated by $r(\overline{C},x)$:
+
+    \begin{center}
+          \includegraphics[width=0.5\linewidth]{C_Subdivision (5).png}
+    \end{center}
+    
+\newpage
+
+Then we can \textbf{rearrange} to this:
+    \begin{center}
+            \includegraphics[width=0.5\linewidth]{C_Subdivision (6).png}
+    \end{center}
+
+
+
+Notice there are now 4 $n\times n$ squares in our big square: \textbf{one $2\times2$} and \textbf{three $1\times1$} squares.
+    \begin{itemize}
+        \item If we multiply all of these squares together, we get all of the black-square arrangements!
+    \end{itemize}
+
+    $$r(C_{2\times2},x)\cdot r(C_{1\times1},x)^3=1+7x+17x^2+19x^3+10x^4+2x^5$$
 
 
 
@@ -855,6 +905,18 @@ Here's a link to extra practice with our formula: \href{https://gatech.instructu
 \section{Module 4 - Overview}
 \label{Module 4}
 
+    \begin{itemize}
+        \item Define and describe ordinary generating functions and their uses
+        \item Use generating functions to solve problems at an appropriate level
+        \item Find, in power series or closed form, the OGF of a given sequence
+        \item Find, with a clear pattern shown or arbitrary nth term given, the sequence generated by an OGF
+        \item Use addition to form a generating function for the sum of two sequences
+        \item Use multiplication to form a generating function for the convolution of two sequences
+        \item Consistently use correct vocabulary and notation, with sufficient work, to discuss and work with generating functions
+        \item Define and give examples of integer partitions
+        \item Use generating functions to model the number of integer partitions satisfying a given set of conditions
+        \item \textcolor{yellow}{\textbf{NOTE}}: You will \textbf{not} be asked to reproduce a proof that two types of partitions have the same number of possibilities (like the last proof in 4.6) on the final exam. 
+    \end{itemize}
 
 
 
